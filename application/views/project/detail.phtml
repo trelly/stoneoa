@@ -1,0 +1,410 @@
+<!-- span content -->
+<div class="span9">
+    <!-- content -->
+    <div class="content">
+        <!-- content-header 
+        <div class="content-header">
+            <ul class="content-header-action pull-right">
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-green color-white"><i class="icofont-plus-sign"></i></div>
+                        <div class="action-text color-green">8765 <span class="helper-font-small color-silver-dark">Visits</span></div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-teal color-white"><i class="icofont-user-md"></i></div>
+                        <div class="action-text color-teal">1437 <span class="helper-font-small color-silver-dark">Users</span></div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-orange color-white">$</div>
+                        <div class="action-text color-orange">4367 <span class="helper-font-small color-silver-dark">Orders</span></div>
+                    </a>
+                </li>
+            </ul>
+            <h2><i class="icofont-file"></i> Form Elements</h2>
+        </div> /content-header -->
+
+        <!-- content-breadcrumb -->
+        <div class="content-breadcrumb">
+            <!--breadcrumb-nav
+            <ul class="breadcrumb-nav pull-right">
+                <li class="divider"></li>
+                <li class="btn-group">
+                    <a href="#" class="btn btn-small btn-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="icofont-cogs"></i> Controls
+                        <i class="icofont-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#element" class="scroll">Element</a></li>
+                        <li><a href="#validation" class="scroll">Validation</a></li>
+                        <li><a href="#wizard" class="scroll">Wizard</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#extending" class="scroll">Extending</a></li>
+                        <li><a href="#controls" class="scroll">Controls</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#buttons" class="scroll">Buttons</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="btn-group">
+                    <a href="#" class="btn btn-small btn-link">
+                        <i class="icofont-user"></i> Users <span class="color-red">(+34)</span>
+                    </a>
+                </li>
+            </ul>/breadcrumb-nav-->
+
+            <!--breadcrumb-->
+            <ul class="breadcrumb">
+                <li><a href="../system/dashboard"><i class="icofont-home"></i>主面板</a> <span class="divider">&rsaquo;</span></li>
+                <li><a href="list">项目管理</a> <span class="divider">&rsaquo;</span></li>
+                <li class="active">项目进度</li>
+            </ul><!--/breadcrumb-->
+        </div><!-- /content-breadcrumb -->
+
+        <!-- content-body -->
+        <div class="content-body">
+            <!-- form -->
+            <div class="row-fluid">
+                <div class="span12">
+
+                    <!-- =========================================
+                                        ELEMENT
+                    =========================================== -->
+                    <!--element-->
+                    <div id="element" class="row-fluid">
+                        <!--span-->
+                        <div class="span12">
+                            <!--box-->
+                            <div class="box corner-all">
+                                <!--box header-->
+                                <div class="box-header grd-white color-silver-dark corner-top">
+                                    <!--div class="header-control">
+                                        <a data-box="collapse"><i class="icofont-caret-up"></i></a>
+                                        <a data-box="close">&times;</a>
+                                    </div-->
+                                    <span>项目进度</span>
+                                </div><!--/box header-->
+                                <!--box body-->
+                                <div class="box-body">
+                                    <!--element-->
+					<h4>项目名称</h4>
+					<ul class="nav nav-tabs">
+						<!--tab menus-->
+						<li class="dropdown active" node-type="atab">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">任务 <b class="caret"></b></a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#boxdropdown-1" data-toggle="tab" node-data="task-my">我负责的任务</a></li>
+							<li><a href="#boxdropdown-2" data-toggle="tab" node-data="task-all">全部任务</a></li>
+                                                    </ul>
+                                                </li>
+						<li class="" node-type="atab"><a data-toggle="tab" href="#boxtab-bellow-2" node-data="member">成员</a></li>
+						<li class="" node-type="atab"><a data-toggle="tab" href="#boxtab-bellow-3" node-data="landmark">里程碑</a></li>
+						<!--li class="" node-type="atab"><a data-toggle="tab" href="#boxtab-bellow-4" node-data="dynamic">动态</a></li-->
+						<!--li class="" node-type="atab"><a data-toggle="tab" href="#boxtab-bellow-5" node-data="file">文件</a></li-->
+						
+					</ul>
+
+					<div node-id="panel">
+						<a class="btn" style="margin-bottom:10px;"  id="btn-addtask">添加任务</a>
+
+						<!-- add -->
+						<div class="box-body">
+						<form class="form-horizontal"  style="display:none;" id="layer-addtask">
+							<div class="control-group">
+							    <label class="control-label" for="inputAuto">*任务名称</label>
+							    <div class="controls">
+								<input type="text" name="title" class="grd-white" />
+							    </div>
+							</div>
+							<div class="control-group">
+							    <label class="control-label" for="inputSelectMulti">负责人</label>
+							    <div class="controls">
+								<select name="manager" data-form="select2" style="width:220px" data-placeholder="负责人" >
+								    
+								</select>
+							    </div>
+							</div>
+							<!--div class="control-group">
+							    <label class="control-label" for="inputSelectMulti">权限</label>
+							    <div class="controls">
+								<label class="checkbox" style='padding-left:0px;'>
+								    <input type="checkbox" data-form="uniform" name="stependable" value="1" checked='true' />所有成员可见
+								</label>
+							    </div>
+							</div-->
+							<div class="control-group">
+							    <label class="control-label" for="inputDate">开始时间</label>
+							    <div class="controls">
+								<div class="input-append date" data-form="datepicker" data-date="2014-04-01" data-date-format="yyyy-mm-dd">
+								    <input name="start_date" class="grd-white"  size="16" type="text" readonly="true"/>
+								    <span class="add-on"><i class="icon-th"></i></span>
+								</div>
+							    </div>
+							</div>
+							<div class="control-group">
+							    <label class="control-label" for="inputDate">结束时间</label>
+							    <div class="controls">
+								<div class="input-append date" data-form="datepicker" data-date="2014-04-01" data-date-format="yyyy-mm-dd">
+								    <input name="end_date" class="grd-white"  size="16" type="text" readonly="true"/>
+								    <span class="add-on"><i class="icon-th"></i></span>
+								</div>
+							    </div>
+							</div>
+							<!--div class="control-group">
+							    <label class="control-label" for="inputDate">优先级</label>
+							    <div class="controls">
+								<select id="inputSelect" data-form="select2" style="width:220px;">
+								    <option />高
+								    <option />中
+								    <option />低
+								</select>
+							    </div>
+							</div-->
+							<div class="control-group">
+							    <label class="control-label" for="inputDate">里程碑</label>
+							    <div class="controls">
+								<select id="select_milestone" name="milestone" data-form="select2" style="width:220px;">
+								    <option />请选择
+								</select>
+							    </div>
+							</div>
+							<div class="control-group">
+							    <label class="control-label" for="inputDate">任务状态</label>
+							    <div class="controls">
+								<select name="progress" data-form="select2" style="width:220px;">
+								    <option value="0"/>未启动
+								    <option value="1" />已启动
+								    <option value="2" />25%
+								    <option value="3" />50%
+								    <option value="4" />75%
+								    <option value="5" />已完成
+								    <option value="6" />暂停
+								</select>
+							    </div>
+							</div>
+							<!--div class="control-group">
+							    <label class="control-label" for="inputAuto">附件</label>
+							    <div class="controls">
+								<input type="file" data-form="uniform" id="task_file_input" size="19" style="opacity: 0;" multiple="multiple">
+							    </div>
+							    <div class="controls email-fujian" id="task_file_list">
+								<dl>
+								    <dt><a target="_blank" href="/file/get?path=/20131104.jpg">西安大洋灯带.rar(304.12k)</a></dt>
+								    <dt><a target="_blank" href="/file/get?path=/20131104.jpg">西安大洋灯带.rar(304.12k)</a></dt>
+								</dl>
+							    </div>
+							</div-->
+							<!--div class="control-group">
+							    <label class="control-label" for="inputDate">重复周期</label>
+							    <div class="controls">
+								<select id="inputSelect" data-form="select2" style="width:220px;">
+								    <option />从不
+								    <option />按天
+								    <option />按周
+								    <option />按月
+								</select>
+							    </div>
+							</div-->
+							<!--div class="control-group">
+							    <label class="control-label" for="inputAuto">地点</label>
+							    <div class="controls">
+								<input type="text" id="inputAuto" class="grd-white" />
+							    </div>
+							</div-->
+							<div class="control-group">
+							    <label class="control-label" for="inputEditorSimple">说明</label>
+							    <div class="controls">
+								<textarea name="description" class="span10" rows="8" data-form="wysihtml5" placeholder="Enter text ..."></textarea>
+							    </div>
+							</div>
+							<div class="form-actions" style="margin:0;">
+							    <button type="button" class="btn btn-primary" id="sub_add_task">添加</button>
+							    <button type="button" class="btn" id="cancel-task">取消</button>
+							</div>
+
+						</form>
+						</div>
+						<!-- /add -->
+
+						
+                                                <div class="box-body">
+						    <table id="tasklist" node-id="datatables" class="table table-bordered table-striped responsive mail">
+							 <thead>
+							     <tr>
+								 <th>任务名称</th>
+								 <th>负责人</th>
+								 <th>进度</th>
+								 <th>起始时间</th>
+								 <th>结束时间</th>
+								 <th>说明</th>
+								 <th>操作</th>
+							     </tr>
+							 </thead>
+							 <tbody>
+							 </tbody>
+						     </table>
+						</div>
+					</div>
+					<div node-id="panel" style="display:none;">
+						<a class="btn" style="margin-bottom:10px;"  id="btn-addmember">新增成员</a>
+						<div class="box-body">
+							<form class="form-horizontal"  id="layer-addmember" style="display:none;">
+								<div class="control-group">
+								    <label class="control-label" for="inputSelectMulti">新增成员</label>
+								    <div class="controls">
+									<select name="member"  data-form="select2" style="width:200px" data-placeholder="选人">
+									    
+									</select>
+								    </div>
+								</div>
+								<div class="form-actions" style="margin:0;">
+								    <button type="button" class="btn btn-primary" id="sub-member">添加</button>
+								    <button type="button" class="btn" id="cancel-member">取消</button>
+								</div>
+							</form>
+						</div>
+						<div class="box-body">
+						    <table id="memberlist" class="table table-bordered table-striped responsive mail">
+							 <thead>
+							     <tr>
+								 <th>姓名</th>
+								 <th>部门</th>
+								 <th>角色</th>
+								 <th>操作</th>
+							     </tr>
+							 </thead>
+							 <tbody>
+							 </tbody>
+						     </table>
+						</div>
+					</div>
+					<!-- add -->
+					<div node-id="panel" style="display:none;">
+						<a class="btn" style="margin-bottom:10px;"  id="btn-addlandmark">添加里程碑</a>
+						<div class="box-body"  id="layer-addlandmark" style="display:none;">
+						<form class="form-horizontal">
+							<div class="control-group">
+							    <label class="control-label" for="inputAuto">*新里程碑</label>
+							    <div class="controls">
+								<input type="text" name="name" class="grd-white" />
+							    </div>
+							</div>
+							<div class="control-group">
+							    <label class="control-label" for="inputDate">时间点</label>
+							    <div class="controls">
+								<div class="input-append date" data-form="datepicker" data-date="2014-04-01" data-date-format="yyyy-mm-dd">
+								    <input name="timepoint" class="grd-white" readonly size="16" type="text" />
+								    <span class="add-on"><i class="icon-th"></i></span>
+								</div>
+							    </div>
+							</div>
+							<div class="form-actions" style="margin:0;">
+							    <button type="button" class="btn btn-primary" id="sub-milestone">添加</button>
+							    <button type="button" class="btn" id="cancel-landmark">取消</button>
+							</div>
+
+						</form>
+						</div>
+
+						<div class="box-body">
+						    <table id="milestonelist" class="table table-bordered table-striped responsive mail">
+							 <thead>
+							     <tr>
+								 <th>名称</th>
+								 <th>日期</th>
+							     </tr>
+							 </thead>
+							 <tbody>
+							    
+							 </tbody>
+						     </table>
+						</div>
+					</div>
+					<!-- /add -->
+					<div node-id="panel"  style="display:none;">
+						<div class="box-body">
+						    <table id="datatables" class="table table-bordered table-striped responsive mail">
+							 <thead>
+							     <tr>
+								 <th>用户</th>
+								 <th>动作</th>
+								 <th>开始时间</th>
+								 <th>结束时间</th>
+								 <th>备注</th>
+							     </tr>
+							 </thead>
+							 <tbody>
+							     <tr class="odd gradeX">
+								 <td class="center">yuanxu</td>
+								 <td>新建任务</td>
+								 <td class="center">2014-04-02 17:52:00</td>
+								 <td class="center">2014-04-02 17:52:00</td>
+								 <td class="center">adsfaf</td>
+							     </tr>
+							     <tr class="odd gradeX">
+								 <td class="center">yuanxu</td>
+								 <td>上传文件<a href="#">stone.psd</a></td>
+								 <td class="center">2014-04-02 17:52:00</td>
+								 <td class="center">2014-04-02 17:52:00</td>
+								 <td class="center">v2.0</td>
+							     </tr>
+							 </tbody>
+						     </table>
+						</div>
+					</div>
+					<div node-id="panel"  style="display:none;">
+						<!--a class="btn" style="margin-bottom:10px;"  id="">上传文件</a>
+						<div class="box-body">
+						    <div class="controls">
+							<div class="uploader" id="uniform-inputUpload"><input type="file" data-form="uniform" id="inputUpload" size="19" style="opacity: 0;"><span class="filename">No file selected</span><span class="action">Choose File</span></div>
+						    </div>
+						    <div class="controls">
+							<textarea name="message" data-form="wysihtml5" rows="6" class="span11"></textarea>
+						    </div>
+						</div-->
+						<div class="box-body">
+						    <table id="datatables" class="table table-bordered table-striped responsive mail">
+							 <thead>
+							     <tr>
+								 <th>文件名</th>
+								 <th>上传时间</th>
+								 <th>用户</th>
+								 <th>备注</th>
+							     </tr>
+							 </thead>
+							 <tbody>
+							     <tr class="odd gradeX">
+								 <td class="center"><a href="#">stone.psd</a></td>
+								 <td>2014-04-02 17:52:00</td>
+								 <td class="center">yuanxu</td>
+								 <td class="center">v3.0</td>
+							     </tr>
+							     <tr class="odd gradeX">
+								 <td class="center"><a href="#">stone.psd</a></td>
+								 <td>2014-04-02 17:52:00</td>
+								 <td class="center">yuanxu</td>
+								 <td class="center">v3.0</td>
+							     </tr>
+							 </tbody>
+						     </table>
+						</div>
+					</div>
+
+                                    <!--/element-->
+                                </div><!--/box body-->
+                            </div><!--/box-->
+                        </div><!--/span--> 
+                    </div><!--/element-->
+
+                </div><!--/span-->
+            </div><!--/row-fluid-->
+            <!--/form-->
+        </div><!--/content-body -->
+    </div><!-- /content -->
+</div>
+<!-- /span content -->

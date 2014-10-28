@@ -1,0 +1,145 @@
+<!-- span content -->
+<div class="span9">
+    <!-- content -->
+    <div class="content">
+        <!-- content-header 
+        <div class="content-header">
+            <ul class="content-header-action pull-right">
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-green color-white"><i class="icofont-plus-sign"></i></div>
+                        <div class="action-text color-green">8765 <span class="helper-font-small color-silver-dark">Visits</span></div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-teal color-white"><i class="icofont-user-md"></i></div>
+                        <div class="action-text color-teal">1437 <span class="helper-font-small color-silver-dark">Users</span></div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-orange color-white">$</div>
+                        <div class="action-text color-orange">4367 <span class="helper-font-small color-silver-dark">Orders</span></div>
+                    </a>
+                </li>
+            </ul>
+            <h2><i class="icofont-file"></i> Form Elements</h2>
+        </div> /content-header -->
+
+        <!-- content-breadcrumb -->
+        <div class="content-breadcrumb">
+            <!--breadcrumb-nav
+            <ul class="breadcrumb-nav pull-right">
+                <li class="divider"></li>
+                <li class="btn-group">
+                    <a href="#" class="btn btn-small btn-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="icofont-cogs"></i> Controls
+                        <i class="icofont-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#element" class="scroll">Element</a></li>
+                        <li><a href="#validation" class="scroll">Validation</a></li>
+                        <li><a href="#wizard" class="scroll">Wizard</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#extending" class="scroll">Extending</a></li>
+                        <li><a href="#controls" class="scroll">Controls</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#buttons" class="scroll">Buttons</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="btn-group">
+                    <a href="#" class="btn btn-small btn-link">
+                        <i class="icofont-user"></i> Users <span class="color-red">(+34)</span>
+                    </a>
+                </li>
+            </ul>/breadcrumb-nav-->
+
+            <!--breadcrumb-->
+            <ul class="breadcrumb">
+                <li><a href="../system/dashboard"><i class="icofont-home"></i>主面板</a> <span class="divider">&rsaquo;</span></li>
+                <li><a href="set">审批管理</a> <span class="divider">&rsaquo;</span></li>
+                <li class="active">新建审批</li>
+            </ul><!--/breadcrumb-->
+        </div><!-- /content-breadcrumb -->
+	<script>
+	
+	</script>
+        <!-- content-body -->
+        <div class="content-body">
+            <!-- form -->
+            <div class="row-fluid">
+                <div class="span12">
+
+                    <!-- =========================================
+                                        ELEMENT
+                    =========================================== -->
+                    <!--element-->
+                    <div id="element" class="row-fluid">
+                        <!--span-->
+                        <div class="span12">
+                            <!--box-->
+                            <div class="box corner-all">
+                                <!--box header-->
+                                <div class="box-header grd-white color-silver-dark corner-top">
+                                    <!--div class="header-control">
+                                        <a data-box="collapse"><i class="icofont-caret-up"></i></a>
+                                        <a data-box="close">&times;</a>
+                                    </div-->
+                                    <span>审批</span>
+                                </div><!--/box header-->
+                                <!--box body-->
+                                <div class="box-body">
+                                    <!--element-->
+                                    <form class="form-horizontal">
+					<div class="control-group">
+                                            <label class="control-label">审批名称：</label>
+                                            <div class="controls" id="approve_name">
+                                                <p><span class="input-xlarge uneditable-input"></span></p>
+                                            </div>
+                                        </div>
+					<div id="approve-steps">
+						<div class="control-group">
+						    <label class="control-label" for="inputSelectMulti">流程说明：</label>
+						</div>
+						<div id="approve-steps-list"></div>
+					</div>
+
+					<div class="gallery" id="table">
+					    
+					</div>
+					
+					<div class="control-group" id="senderEl">
+					    <label class="control-label">下一步 发送给：</label>
+                                            <div class="controls" id="next-user">
+						<p><span class="input-xlarge uneditable-input"></span></p>
+					    </div>
+					</div>
+					<!--div class="control-group">
+					    <label class="control-label">驳回理由：</label>
+                                            <div class="controls">
+						<textarea  class="span12" rows="8" data-form="wysihtml5" placeholder="请填写驳回理由..."></textarea>
+					    </div>
+					</div-->
+                                        <div class="form-actions">
+					    <button type="button" class="btn btn-primary" id="btn-send">送审</button>
+					    <!--button type="button" class="btn btn-primary" id="btn-back">驳回</button-->
+					    <button type="button" class="btn btn-primary" id="btn-complete" style="display:none;">完成</button>
+                                        </div>
+                                    </form>
+                                    <!--/element-->
+                                </div><!--/box body-->
+                            </div><!--/box-->
+                        </div><!--/span--> 
+                    </div><!--/element-->
+
+                </div><!--/span-->
+            </div><!--/row-fluid-->
+            <!--/form-->
+        </div><!--/content-body -->
+    </div><!-- /content -->
+</div>
+<!-- /span content -->

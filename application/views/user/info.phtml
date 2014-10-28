@@ -1,0 +1,140 @@
+<!-- span content -->
+<div class="span9">
+    <!-- content -->
+    <div class="content">
+	
+	
+	<!-- content-breadcrumb -->
+	<div class="content-breadcrumb">
+	    
+	    
+	    <!--breadcrumb-->
+	    <ul class="breadcrumb">
+		<li><a href="../system/dashboard"><i class="icofont-home"></i>主面板</a> <span class="divider">&rsaquo;</span></li>
+		<li><a href="list">用户管理</a> <span class="divider">&rsaquo;</span></li>
+		<li class="active">个人信息</li>
+	    </ul><!--/breadcrumb-->
+	</div><!-- /content-breadcrumb -->
+	
+	<!-- content-body -->
+	<div class="content-body">
+	    <!-- form -->
+	    <div class="row-fluid">
+		<div class="span12">
+		    
+		    <!-- =========================================
+					ELEMENT
+		    =========================================== -->
+		    <!--element-->
+		    <div id="element" class="row-fluid">
+			<!--span-->
+			<div class="span12">
+			    <!--box-->
+			    <div class="box corner-all">
+				<!--box header-->
+				<div class="box-header grd-white color-silver-dark corner-top">
+				    <!--div class="header-control">
+					<a data-box="collapse"><i class="icofont-caret-up"></i></a>
+					<a data-box="close">&times;</a>
+				    </div-->
+				    <span>个人信息</span>
+				</div><!--/box header-->
+				<!--box body-->
+				<div class="box-body">
+				    <!--element-->
+				    <form class="form-horizontal" id="profile_form"/>
+					<div class="control-group">
+					    <label class="control-label" for="inputUpload">头像：</label>
+					    
+					    <div class="controls">
+						<img src="/profile/photoView/?path=<?=$user['photo']?>"  width="48" height="48" id="img_photo"/>
+						<input type="hidden" name="photo" value="<?=$user['photo']?>"/>
+					    </div>
+					</div>
+					<div class="control-group">
+					    <label class="control-label" for="inputAuto">E-mail：</label>
+					    <div class="controls" style='padding-top:4px;'>
+						<?=$user['email']?>
+					    </div>
+					</div>
+					<div class="control-group">
+					    <label class="control-label" for="inputAuto">部门：</label>
+					    <div class="controls" style='padding-top:4px;'>
+						<?=$user['department']?>
+					    </div>
+					</div>
+					<div class="control-group">
+					    <label class="control-label" for="inputAuto">真实姓名：</label>
+					    <div class="controls" style='padding-top:4px;'>
+						<?=$user['name']?>
+					    </div>
+					</div>
+					<div class="control-group">
+					    <label class="control-label" for="inputSelect">性别：</label>
+					    <div class="controls" style='padding-top:4px;'>
+						     <?php if($user['sex'] == 1){?> 男 <?php } ?>
+						     <?php if($user['sex'] == 0){?> 女 <?php } ?> 
+					    </div>
+					</div>
+					<!--div class="control-group">
+					    <label class="control-label" for="inputAuto">职务：</label>
+					    <div class="controls" style='padding-top:4px;'>
+						<input type="text" id="" class="grd-white" />
+					    </div>
+					</div-->
+					<div class="control-group">
+					    <label class="control-label" for="inputAuto">工位：</label>
+					    <div class="controls" style='padding-top:4px;'>
+						<?=$user['position']?>
+					    </div>
+					</div>
+					<div class="control-group">
+					    <label class="control-label" for="inputAuto">工号：</label>
+					    <div class="controls" style='padding-top:4px;'>
+						<?=$user['employeeid']?>
+					    </div>
+					</div>
+					<div class="control-group">
+					    <label class="control-label" for="inputAuto">办公电话：</label>
+					    <div class="controls" style='padding-top:4px;'>
+						<?=$user['telephone']?>
+					    </div>
+					</div>
+					<div class="control-group">
+					    <label class="control-label" for="inputAuto">移动电话：</label>
+					    <div class="controls" style='padding-top:4px;'>
+						<?=$user['cellphone']?>
+					    </div>
+					</div>
+					
+					<div class="control-group">
+					    <label class="control-label" for="inputDate">生日：</label>
+					    <div class="controls" style='padding-top:4px;'>
+						    <?=$user['birthdate']?>
+					    </div>
+					</div>
+					<!--div class="control-group">
+					    <label class="control-label" for="inputSelect">所属公司：</label>
+					    <div class="controls">
+						<select id="inputSelect" data-form="select2" style="width:200px" data-placeholder="Your Favorite Type of Bear">
+						    <option />北京
+						    <option />上海
+						</select>
+					    </div>
+					</div-->
+					<div class="form-actions">
+					    <a href='list' class="btn">返回</a>
+					</div>
+				    </form>
+				    <!--/element-->
+				</div><!--/box body-->
+			    </div><!--/box-->
+			</div><!--/span--> 
+		    </div><!--/element-->
+		    
+		</div><!--/span-->
+	    </div><!--/row-fluid-->
+	    <!--/form-->
+	</div><!--/content-body -->
+    </div><!-- /content -->
+</div><!-- /span content -->

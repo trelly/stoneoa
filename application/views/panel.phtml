@@ -1,0 +1,106 @@
+<aside class="side-right">
+    <!-- sidebar-right -->
+    <div class="sidebar-right">
+        <!--sidebar-right-header-->
+        <div class="sidebar-right-header">
+	    <p class="bold" style='margin-bottom:0;'>今天是<small class="muted">2013-12-31</small></p>
+	    <p><a href="javascript:;" class="label label-success" id="checkinout">签到</a></p>
+        </div>
+        <!--/sidebar-right-header-->
+        <!--sidebar-right-control-->
+        <div class="sidebar-right-control">
+            <ul class="sr-control-item">
+                <li class="active" node-id="contact"><a href="#contact" data-toggle="tab" title="联系人"><i class="icofont-group"></i></a></li>
+                <li node-id="fileupload"><a href="#alt1" data-toggle="tab" title="文件上传"><i class="icofont-flag"></i></a></li>
+                <li node-id="fullscreen" rel="tooltip-bottom" title="全屏"><a href="/chat"><i class="icofont-external-link"></i></a></li>
+            </ul>
+        </div><!-- /sidebar-right-control-->
+        <!-- sidebar-right-content -->
+        <div class="sidebar-right-content" id="chat-right">
+            <div class="tab-content">
+                <!--contact-->
+                <div class="tab-pane fade active in" id="contact">
+                    <div class="side-contact">
+                        <!--contact-control-->
+                        <div class="contact-control">
+                            <!--div class="btn-group pull-right">
+                                <button class="dropdown-toggle bg-transparent no-border" data-toggle="dropdown">
+                                    <i class="icofont-caret-down"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="icofont-certificate color-green"></i> 在线</a></li>
+                                    <li><a href="#"><i class="icofont-certificate color-silver-dark"></i> 离线</a></li>
+                                    <li><a href="#"><i class="icofont-certificate color-red"></i> 忙碌</a></li>
+                                    <li><a href="#"><i class="icofont-certificate color-orange"></i> 空闲</a></li>
+                                </ul>
+                            </div-->
+                            <h5><!--i class="icofont-comment color-green"></i--> <span></span></h5>
+                        </div><!--/contact-control-->
+                        <!--contact-search-->
+                        <div class="contact-search">
+                            <div class="input-icon-prepend">
+                                <div class="icon">
+                                    <button type="submit">
+                                        <i class="typicn-message color-silver-dark"></i>
+                                    </button>
+                                </div>
+                                <input class="input-block-level grd-white" maxlength="11" type="text" name="contact-search" placeholder="搜索联系人" />
+                            </div>
+                        </div><!--/contact-search-->
+                        <!--contact-list, we set this max-height:380px, you can set this if you want-->
+                        <ul class="contact-list">
+                            
+                        </ul><!--/contact-list-->
+                    </div>
+                </div><!--/contact-->
+
+                <!--chat-->
+                <div class="tab-pane fade" id="chat">
+                    <div class="side-chat">
+                        <!--header part-->
+                        <div class="chat-header">
+                            <div class="chat-action">
+                                <div class="btn-group pull-right">
+                                    <!--we use data toggle tab for navigate this action-->
+                                    <a class="bg-transparent no-border" href="#contact" data-toggle="tab" title="minimize"><i class="icofont-minus"></i></a>
+                                    <a class="bg-transparent no-border" node-id="full" title="pop out" href="/chat/index"><i class="icofont-resize-full"></i></a>
+                                    <a class="bg-transparent no-border" href="#contact" data-toggle="tab" title="close"><i class="icofont-remove-sign"></i></a>
+                                </div>
+                            </div>
+                            <h5><i class="icofont-certificate color-green"></i> <span></span></h5>
+                        </div>
+                        <!--content part-->
+			<div id="chat-content-r">
+			</div>
+                        <!--status typed part-->
+                        <!--div class="chat-typed"><i class="typicn-chat"></i> Jane smith is typing...</div-->
+                        <!--input part-->
+                        <div class="chat-input">
+                            <textarea class="input-block-level" placeholder="chat here..." id="chat-text-right"></textarea>
+                        </div>
+                    </div>
+                    <div class="divider-content"><span></span></div>
+                </div><!--chat-->
+
+                <!--alternative 1-->
+                <div class="tab-pane fade" id="alt1">
+                    <div class="divider-content"><span></span></div> <!--divider-->
+
+                    <a href="/file/private" class="btn btn-block btn-mini btn-primary">上传文件</a>
+		    <!--button class="btn btn-block btn-mini btn-primary" style="position:relative;">上传文件<input style="width:100%;height:100%;" type="file" class="input-upload"  multiple="multiple"/></button-->
+                    <!--button class="btn btn-block btn-mini">上传到私人文件夹</button-->
+
+                    <div class="divider-content"><span></span></div> <!--divider-->
+
+                    <!-- side-task -->
+                    <div class="side-task" node-id="upprogress" style="display:none;">
+                        
+                    </div><!-- /side-task -->
+
+                    <div class="divider-content" node-id="upprogress" style="display:none;"><span></span></div> <!--divider-->
+
+                </div><!--/alternative 1-->
+            </div>
+        </div><!-- /sidebar-right-content -->
+    </div><!-- /sidebar-right -->
+</aside>

@@ -1,0 +1,203 @@
+<!-- span content -->
+<div class="span9">
+    <!-- content -->
+    <div class="content">
+        <!-- content-header
+        <div class="content-header">
+            <ul class="content-header-action pull-right">
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-green color-white"><i class="icofont-plus-sign"></i></div>
+                        <div class="action-text color-green">8765 <span class="helper-font-small color-silver-dark">Visits</span></div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-teal color-white"><i class="icofont-user-md"></i></div>
+                        <div class="action-text color-teal">1437 <span class="helper-font-small color-silver-dark">Users</span></div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-orange color-white">$</div>
+                        <div class="action-text color-orange">4367 <span class="helper-font-small color-silver-dark">Orders</span></div>
+                    </a>
+                </li>
+            </ul>
+            <h2><i class="icofont-file"></i> Form Elements</h2>
+        </div>  /content-header -->
+
+        <!-- content-breadcrumb -->
+        <div class="content-breadcrumb">
+            <!--breadcrumb-nav
+            <ul class="breadcrumb-nav pull-right">
+                <li class="divider"></li>
+                <li class="btn-group">
+                    <a href="#" class="btn btn-small btn-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="icofont-cogs"></i> Controls
+                        <i class="icofont-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#element" class="scroll">Element</a></li>
+                        <li><a href="#validation" class="scroll">Validation</a></li>
+                        <li><a href="#wizard" class="scroll">Wizard</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#extending" class="scroll">Extending</a></li>
+                        <li><a href="#controls" class="scroll">Controls</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#buttons" class="scroll">Buttons</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="btn-group">
+                    <a href="#" class="btn btn-small btn-link">
+                        <i class="icofont-user"></i> Users <span class="color-red">(+34)</span>
+                    </a>
+                </li>
+            </ul>/breadcrumb-nav-->
+
+            <!--breadcrumb-->
+            <ul class="breadcrumb">
+                <li><a href="../system/dashboard"><i class="icofont-home"></i> 主面板</a> <span class="divider">&rsaquo;</span></li>
+                <li><a href="manages">邮件管理</a> <span class="divider">&rsaquo;</span></li>
+                <li class="active">新建邮件</li>
+            </ul><!--/breadcrumb-->
+        </div><!-- /content-breadcrumb -->
+
+        <!-- content-body -->
+        <div class="content-body">
+            <!-- form -->
+            <div class="row-fluid">
+                <div class="span12">
+
+                    <!-- =========================================
+                                        ELEMENT
+                    =========================================== -->
+                    <!--element-->
+                    <div id="element" class="row-fluid">
+                        <!--span-->
+                        <div class="span12">
+                            <!--box-->
+                            <div class="box corner-all">
+                                <!--box header-->
+                                <div class="box-header grd-white color-silver-dark corner-top">
+                                    <!--div class="header-control">
+                                        <a data-box="collapse"><i class="icofont-caret-up"></i></a>
+                                        <a data-box="close">&times;</a>
+                                    </div-->
+                                    <span>新建邮件</span>
+                                </div><!--/box header-->
+                                <!--box body-->
+                                <div class="box-body">
+                                    <!--element-->
+				    <style>
+					.suggest{
+						border:1px solid #ccc;
+						line-height:30px;
+						background-color: #ffffff;
+						border: 1px solid #cccccc;
+						-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+						-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+						box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+						-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+						-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+						-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+						transition: border linear 0.2s, box-shadow linear 0.2s;
+						display: inline-block;
+						padding: 4px 6px;
+						margin-bottom: 10px;
+						font-size: 14px;
+						line-height: 20px;
+						color: #555555;
+						vertical-align: middle;
+						-webkit-border-radius: 4px;
+						-moz-border-radius: 4px;
+						border-radius: 4px;
+						min-width:206px;
+					}
+					.suggest em{
+						float: left;
+						padding:0 3px;
+						font-style:normal;
+						font-size:12px;
+						height:24px;
+						line-height:24px;
+					}
+					.suggest em.select{
+						background:#006b8e;
+						color:#fff;
+					}
+					.suggest input{
+						float: left;
+						width:13px;
+						border:none;
+						height:24px;
+						padding-bottom:0;
+						padding-top:0;
+						margin-bottom:0;
+					}
+					
+					.form-horizontal .controls.suggest{
+						margin-left:20px;
+					}
+				    </style>
+                                    <form id="mailbox" class="form-horizontal" />
+                                        <div class="control-group">
+                                            <label class="control-label" for="inputSelectMulti">收件人</label>
+                                            <div class="controls suggest" id="js_reseiver">
+                                                <input type="text" class="" name="reseiver" value=""/>
+						<ul>
+						</ul>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="inputSelectMulti">抄送</label>
+                                            <div class="controls suggest" id="js_ccreseiver">
+                                                <input type="text" class="" name="ccreseiver" value=""/>
+						<ul>
+						</ul>
+                                            </div>
+                                        </div>                                                        
+                                        <div class="control-group">
+                                            <label class="control-label" for="inputAuto">主题</label>
+                                            <div class="controls">
+                                                <input name="subject" type="text" class="grd-white" />
+                                            </div>
+                                        </div>
+                                    	<div class="control-group">
+					    <label class="control-label" for="inputUpload">附件</label>
+					    <div class="controls">
+						<input type="file" data-form="uniform" id="upload" />
+					    </div>
+					    <!--div id="attachment"></div-->
+					</div>
+                                        <div class="control-group" id="attachment">
+					    <label class="control-label" for="inputUpload"></label>
+					</div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="inputEditorSimple">内容</label>
+                                            <div class="controls">
+                                                <div class="gallery">
+                                                        <div id="editor" style="height:300px;" name="content"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <button type="button" id="save" class="btn btn-primary">发送</button>
+                                        </div>
+                                    </form>
+                                    <!--/element-->
+                                </div><!--/box body-->
+                            </div><!--/box-->
+                        </div><!--/span--> 
+                    </div><!--/element-->
+
+                </div><!--/span-->
+            </div><!--/row-fluid-->
+            <!--/form-->
+        </div><!--/content-body -->
+    </div><!-- /content -->
+</div>
+<!-- /span content -->

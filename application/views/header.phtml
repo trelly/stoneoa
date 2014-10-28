@@ -1,0 +1,87 @@
+<!--nav bar helper-->
+<div class="navbar-helper">
+    <div class="row-fluid">
+        <!--panel site-name-->
+        <div class="span2">
+            <div class="panel-sitename">
+                <h2><a href="http://www.stone.com/"><img src='/public/img/logo.png'/></a></h2>
+            </div>
+        </div>
+        <!--/panel name-->
+
+        <div class="span6">
+            <!--panel search-->
+            <!--div class="panel-search">
+                <form class="form-search" />
+                    <div class="input-icon-append">
+                        <button type="submit" rel="tooltip-bottom" title="search" class="icon"><i class="icofont-search"></i></button>
+                        <input class="input-large search-query grd-white" maxlength="23" placeholder="Search here..." type="text" />
+                    </div>
+                </form>
+            </div--><!--/panel search-->
+        </div>
+        <div class="span4">
+            <!--panel button ext-->
+            <div class="panel-ext">
+                <div class="btn-group">
+                    <!--notification-->
+                    <a class="btn btn-danger btn-small" data-toggle="dropdown" href="#" title="0条信息"  id="noticeTitle">通知</a>
+                    <ul class="dropdown-menu dropdown-notification" id="noticeUl">
+                        <li class="dropdown-header grd-white">暂无通知</li>
+                    </ul>
+                    <!--notification-->
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-inverse btn-small dropdown-toggle" data-toggle="dropdown" href="#">
+                        设置
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li><a tabindex="-1" href="/profile/password">帐号设置</a></li>
+                        <li><a tabindex="-1" href="/profile/set">个人信息设置</a></li>
+                        <!--li class="divider"></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="#">状态</a>
+                            <ul class="dropdown-menu">
+                                <li><a tabindex="-1" href="pricing.html">在线</a></li>
+                                <li><a tabindex="-1" href="bonus-page/resume/index.html">忙碌</a></li>
+                                <li><a tabindex="-1" href="bonus-page/resume/index.html">隐身</a></li>
+                            </ul>
+                        </li-->
+                        <li class="divider"></li>
+                        <li><a tabindex="-1" href="#">退出</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-inverse btn-small" href="/system/logout">退出</a>
+                </div>
+                <div class="btn-group user-group">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <img class="corner-all" align="middle" width="48" height="48" style="height:48px;width:48px;" src="/profile/photoView/?path=<?=$profile['photo']?>" title="<?=$profile['name']?>" alt="<?=$profile['name']?>" /> <!--this for display on PC device-->
+                        <button class="btn btn-small btn-inverse"><?=$profile['name']?></button> <!--this for display on tablet and phone device-->
+                    </a>
+                    <ul class="dropdown-menu dropdown-user" role="menu" aria-labelledby="dLabel">
+                        <li>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="img-circle" width="48" height="48" style="height:48px;width:48px;" src="/profile/photoView/?path=<?=$profile['photo']?>" title="profile" alt="profile" />
+                                </a>
+                                <div class="media-body description">
+                                    <p><strong><?=$profile['name']?></strong></p>
+                                    <p class=""><?=$profile['email']?></p>
+                                    <p class="action"><a class="link"><?=$department['name']?></a> - <a class="link"><?=$profile['telephone']?></a></p>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown-footer">
+                            <div class="clearfix">
+                                <a class="btn btn-small pull-right" href="/profile/set">设置</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--panel button ext-->
+        </div>
+    </div>
+</div>
+<!--/nav bar helper-->

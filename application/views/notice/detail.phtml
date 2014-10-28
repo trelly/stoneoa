@@ -1,0 +1,95 @@
+<!-- span content -->
+<div class="span9">
+    <!-- content -->
+    <div class="content">
+        <!-- content-header 
+        <div class="content-header">
+            <ul class="content-header-action pull-right">
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-green color-white"><i class="icofont-plus-sign"></i></div>
+                        <div class="action-text color-green">8765 <span class="helper-font-small color-silver-dark">Visits</span></div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-teal color-white"><i class="icofont-user-md"></i></div>
+                        <div class="action-text color-teal">1437 <span class="helper-font-small color-silver-dark">Users</span></div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-orange color-white">$</div>
+                        <div class="action-text color-orange">4367 <span class="helper-font-small color-silver-dark">Orders</span></div>
+                    </a>
+                </li>
+            </ul>
+            <h2><i class="icofont-leaf"></i> Widgets</h2>
+        </div> /content-header -->
+
+        <!-- content-breadcrumb -->
+        <div class="content-breadcrumb">
+            <!--breadcrumb-nav
+            <ul class="breadcrumb-nav pull-right">
+                <li class="divider"></li>
+                <li class="btn-group">
+                    <a href="#page-box" class="scroll btn btn-small btn-link">
+                        <i class="icofont-link"></i> Box
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li class="btn-group">
+                    <a href="#page-tabs" class="scroll btn btn-small btn-link">
+                        <i class="icofont-link"></i> Box Tabs
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li class="btn-group">
+                    <a href="#page-accordion" class="scroll btn btn-small btn-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="icofont-link"></i> Accordion
+                    </a>
+                </li>
+            </ul>/breadcrumb-nav-->
+
+            <!--breadcrumb-->
+            <ul class="breadcrumb">
+                <li><a href="../system/dashboard"><i class="icofont-home"></i>主面板</a> <span class="divider">&rsaquo;</span></li>
+		<li><a href="list">浏览公告</a> <span class="divider">&rsaquo;</span></li>
+                <li class="active">公告详情</li>
+            </ul><!--/breadcrumb-->
+        </div><!-- /content-breadcrumb -->
+
+
+        <!-- content-body -->
+        <div class="content-body">
+                <!-- =========================================
+                            BOX & ANIMATE
+            =========================================== -->
+            <div id="notice-top">
+                <h3></h3>
+		<p></p>
+            </div>
+
+            <!-- =========================================
+                            BOX & ANIMATE
+            =========================================== -->
+	    <div class="">    
+		    <div class="box corner-all">	
+			    <div class="<?php if($notice["ann_type"] == 0){ echo 'box-header grd-white color-silver-dark corner-top'; }else{ echo 'box-header grd-red color-white corner-top';}?>">	    
+				<span><?=$notice["title"]?></span>	
+			    </div>	
+			    <div class="box-body corner-bottom">	    
+				<p><?=$notice["content"]?></p>	
+			    </div>   
+		    </div>
+	    </div>
+            <!-- =========================================
+                            END BOX & ANIMATE
+            =========================================== -->
+
+        </div><!--/content-body -->
+    </div><!-- /content -->
+</div>
+<!-- /span content -->

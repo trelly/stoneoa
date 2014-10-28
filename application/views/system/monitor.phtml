@@ -1,0 +1,82 @@
+
+                <!-- span content -->
+                <div class="span9">
+                    <!-- content -->
+                    <div class="content">
+                        <!-- content-breadcrumb -->
+			<div class="content-breadcrumb">                            
+			    <!--breadcrumb-->
+			    <ul class="breadcrumb">
+				<li><a href="../system/dashboard"><i class="icofont-home"></i> 首页</a> <span class="divider">&rsaquo;</span></li>
+				<li class="active">系统监控</li>
+			    </ul><!--/breadcrumb-->
+			</div><!-- /content-breadcrumb -->
+                        <!-- content-body -->
+                        <div class="content-body">
+                            <!-- dashboar -->
+                                                        
+                            <!-- tab stat -->
+                            <div class="box-tab corner-all">
+                                <div class="box-header corner-top">
+                                    <div class="header-control pull-right">
+                                        <a data-box="collapse"><i class="icofont-caret-up"></i></a>
+                                    </div>
+                                    <ul class="nav nav-tabs" id="tab-stat">
+                                        <!--li class="active"><a data-toggle="tab" href="#system-stat">项目状态</a></li-->
+                                        <li><a data-toggle="tab" href="#server-stat">系统状态</a></li>
+                                    </ul>
+                                </div>
+                                <div class="box-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade" id="system-stat" style="display:none;">
+                                            <div class="row-fluid">
+                                                <div class="span4">
+                                                    <div class="dashboard-stat">
+                                                        <div id="visitor-stat" class="chart" style="height: 120px;"></div>
+                                                        <div class="stat-label grd-green color-white">今日备忘</div>
+                                                    </div>
+                                                </div>
+                                                <div class="span4">
+                                                    <div class="dashboard-stat">
+                                                        <div id="order-stat" class="chart" style="height: 120px;"></div>
+                                                        <div class="stat-label grd-teal color-white">今日邮件</div>
+                                                    </div>
+                                                </div>
+                                                <div class="span4">
+                                                    <div class="dashboard-stat">
+                                                        <div id="user-stat" class="chart" style="height: 120px;"></div>
+                                                        <div class="stat-label grd-red color-white">今日审批</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade in active" id="server-stat">
+                                            <div class="row-fluid">
+                                                <div class="span4">
+                                                    <div id="cpu" class="dashboard-stat" rel="tooltip">
+                                                        <input data-chart="knob" type="text" data-readonly="true" data-width="120" data-height="120" data-fgcolor="#00A600" value="2465" data-min="0" data-max="5000" />
+                                                        <div class="stat-label grd-green color-white">CPU</div>
+                                                    </div>
+                                                </div>
+                                                <div class="span4">
+                                                    <div id="memory" class="dashboard-stat" rel="tooltip">
+                                                        <input data-chart="knob" type="text" data-readonly="true" data-width="120" data-height="120" data-fgcolor="#00A0B1" value="8795" data-min="0" data-max="10000" />
+                                                        <div class="stat-label grd-teal color-white">内存</div>
+                                                    </div>
+                                                </div>
+                                                <div class="span4">
+                                                    <div id="disk" class="dashboard-stat" rel="tooltip">
+                                                        <input data-chart="knob" type="text" data-readonly="true" data-width="120" data-height="120" data-fgcolor="#AC193D" value="70" data-min="0" data-max="100" />
+                                                        <div class="stat-label grd-red color-white">磁盘</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /tab stat -->
+                            
+                            <!--/dashboar-->
+                        </div><!--/content-body -->
+                    </div><!-- /content -->
+                </div><!-- /span content -->

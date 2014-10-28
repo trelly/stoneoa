@@ -1,0 +1,171 @@
+<!-- span content -->
+<div class="span9">
+    <!-- content -->
+    <div class="content">
+        <!-- content-breadcrumb -->
+        <div class="content-breadcrumb">                            
+            <!--breadcrumb-->
+            <ul class="breadcrumb">
+                <li><a href="../system/dashboard"><i class="icofont-home"></i> 首页</a> <span class="divider">&rsaquo;</span></li>
+                <li><a href="manages">邮件管理</a> <span class="divider">&rsaquo;</span></li>
+                <li class="active">设置邮件</li>
+            </ul><!--/breadcrumb-->
+        </div><!-- /content-breadcrumb -->
+        <!-- content-body -->
+        <div class="content-body">
+            <!-- tables -->
+            <!--datatables-->
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="box corner-all">
+                        <div class="box-header grd-white corner-top">
+                            <!--div class="header-control">
+                                <a data-box="collapse"><i class="icofont-caret-up"></i></a>
+                                <a data-box="close" data-hide="bounceOutRight">&times;</a>
+                            </div-->
+                            <span>帐户列表</span>
+                        </div>
+                        <div class="box-body">
+                            <!--element-->
+                            <form class="form-horizontal">
+                                <div class="control-group">
+                                    <label class="control-label" for="inputAuto">名称</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputAuto" class="grd-white">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputAuto">标签</label>
+                                    <div class="controls">
+                                        <div class="select2-container select2-container-multi" id="s2id_inputTags" style="width: 200px">    <ul class="select2-choices">  <li class="select2-search-choice">    <div>brown</div>    <a href="#" onclick="return false;" class="select2-search-choice-close" tabindex="-1"></a></li><li class="select2-search-choice">    <div>red</div>    <a href="#" onclick="return false;" class="select2-search-choice-close" tabindex="-1"></a></li><li class="select2-search-choice">    <div>green</div>    <a href="#" onclick="return false;" class="select2-search-choice-close" tabindex="-1"></a></li><li class="select2-search-field">    <input type="text" autocomplete="off" class="select2-input" style="width: 10px;">  </li></ul><div class="select2-drop select2-drop-multi" style="display:none;">   <ul class="select2-results">   </ul></div></div><input type="hidden" id="inputTags" style="width: 200px; display: none;" value="brown,red,green">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputSelect">选择部门</label>
+                                    <div class="controls">
+                                        <div class="select2-container" id="s2id_inputSelect" style="width: 200px">    <a href="#" onclick="return false;" class="select2-choice">   <span>Sloth Bear
+                                            </span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a>    <div class="select2-drop select2-offscreen">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select id="inputSelect" data-form="select2" style="width: 200px; display: none;" data-placeholder="Your Favorite Type of Bear">
+                                            <option>American Black Bear
+                                            </option><option>Asiatic Black Bear
+                                            </option><option>Brown Bear
+                                            </option><option>Giant Panda
+                                            </option><option selected="">Sloth Bear
+                                            </option><option disabled="">Sun Bear
+                                            </option><option>Polar Bear
+                                            </option><option disabled="">Spectacled Bear
+                                        </option></select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputUpload">上传头像</label>
+                                    <div class="controls">
+                                        <div class="uploader" id="uniform-inputUpload"><input type="file" data-form="uniform" id="inputUpload" size="19" style="opacity: 0;"><span class="filename">No file selected</span><span class="action">Choose File</span></div>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputSelect">用户权限选择</label>
+                                    <div class="controls">
+                                        <div class="select2-container" id="s2id_inputSelect" style="width: 200px">    <a href="#" onclick="return false;" class="select2-choice">   <span>Sloth Bear
+                                            </span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a>    <div class="select2-drop select2-offscreen">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select id="inputSelect" data-form="select2" style="width: 200px; display: none;" data-placeholder="Your Favorite Type of Bear">
+                                            <option>American Black Bear
+                                            </option><option>Asiatic Black Bear
+                                            </option><option>Brown Bear
+                                            </option><option>Giant Panda
+                                            </option><option selected="">Sloth Bear
+                                            </option><option disabled="">Sun Bear
+                                            </option><option>Polar Bear
+                                            </option><option disabled="">Spectacled Bear
+                                        </option></select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputSelect">选择上级部门</label>
+                                    <div class="controls">
+                                        <div class="select2-container" id="s2id_inputSelect" style="width: 200px">    <a href="#" onclick="return false;" class="select2-choice">   <span>Sloth Bear
+                                            </span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a>    <div class="select2-drop select2-offscreen">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select id="inputSelect" data-form="select2" style="width: 200px; display: none;" data-placeholder="Your Favorite Type of Bear">
+                                            <option>American Black Bear
+                                            </option><option>Asiatic Black Bear
+                                            </option><option>Brown Bear
+                                            </option><option>Giant Panda
+                                            </option><option selected="">Sloth Bear
+                                            </option><option disabled="">Sun Bear
+                                            </option><option>Polar Bear
+                                            </option><option disabled="">Spectacled Bear
+                                        </option></select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputSelect">个人信息设置</label>
+                                    <div class="controls">
+                                        <div class="select2-container" id="s2id_inputSelect" style="width: 200px">    <a href="#" onclick="return false;" class="select2-choice">   <span>Sloth Bear
+                                            </span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a>    <div class="select2-drop select2-offscreen">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select id="inputSelect" data-form="select2" style="width: 200px; display: none;" data-placeholder="Your Favorite Type of Bear">
+                                            <option>American Black Bear
+                                            </option><option>Asiatic Black Bear
+                                            </option><option>Brown Bear
+                                            </option><option>Giant Panda
+                                            </option><option selected="">Sloth Bear
+                                            </option><option disabled="">Sun Bear
+                                            </option><option>Polar Bear
+                                            </option><option disabled="">Spectacled Bear
+                                        </option></select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputSelect">选择级别</label>
+                                    <div class="controls">
+                                        <div class="select2-container" id="s2id_inputSelect" style="width: 200px">    <a href="#" onclick="return false;" class="select2-choice">   <span>Sloth Bear
+                                            </span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a>    <div class="select2-drop select2-offscreen">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select id="inputSelect" data-form="select2" style="width: 200px; display: none;" data-placeholder="Your Favorite Type of Bear">
+                                            <option>American Black Bear
+                                            </option><option>Asiatic Black Bear
+                                            </option><option>Brown Bear
+                                            </option><option>Giant Panda
+                                            </option><option selected="">Sloth Bear
+                                            </option><option disabled="">Sun Bear
+                                            </option><option>Polar Bear
+                                            </option><option disabled="">Spectacled Bear
+                                        </option></select>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputEditorSimple">个人说明</label>
+                                    <div class="controls">
+                                        <ul class="wysihtml5-toolbar" style=""><li class="dropdown"><a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-font"></i>&nbsp;<span class="current-font">Normal text</span>&nbsp;<b class="caret"></b></a><ul class="dropdown-menu"><li><a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="div" href="javascript:;" unselectable="on">Normal text</a></li><li><a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1" href="javascript:;" unselectable="on">Heading 1</a></li><li><a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h2" href="javascript:;" unselectable="on">Heading 2</a></li><li><a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h3" href="javascript:;" unselectable="on">Heading 3</a></li></ul></li><li><div class="btn-group"><a class="btn" data-wysihtml5-command="bold" title="CTRL+B" href="javascript:;" unselectable="on">Bold</a><a class="btn" data-wysihtml5-command="italic" title="CTRL+I" href="javascript:;" unselectable="on">Italic</a><a class="btn" data-wysihtml5-command="underline" title="CTRL+U" href="javascript:;" unselectable="on">Underline</a></div></li><li><div class="btn-group"><a class="btn" data-wysihtml5-command="insertUnorderedList" title="Unordered list" href="javascript:;" unselectable="on"><i class="icon-list"></i></a><a class="btn" data-wysihtml5-command="insertOrderedList" title="Ordered list" href="javascript:;" unselectable="on"><i class="icon-th-list"></i></a><a class="btn" data-wysihtml5-command="Outdent" title="Outdent" href="javascript:;" unselectable="on"><i class="icon-indent-right"></i></a><a class="btn" data-wysihtml5-command="Indent" title="Indent" href="javascript:;" unselectable="on"><i class="icon-indent-left"></i></a></div></li><li><div class="bootstrap-wysihtml5-insert-link-modal modal hide fade"><div class="modal-header"><a class="close" data-dismiss="modal">×</a><h3>Insert link</h3></div><div class="modal-body"><input value="http://" class="bootstrap-wysihtml5-insert-link-url input-xlarge"></div><div class="modal-footer"><a href="#" class="btn" data-dismiss="modal">Cancel</a><a href="#" class="btn btn-primary" data-dismiss="modal">Insert link</a></div></div><a class="btn" data-wysihtml5-command="createLink" title="Insert link" href="javascript:;" unselectable="on"><i class="icon-share"></i></a></li><li><div class="bootstrap-wysihtml5-insert-image-modal modal hide fade"><div class="modal-header"><a class="close" data-dismiss="modal">×</a><h3>Insert image</h3></div><div class="modal-body"><input value="http://" class="bootstrap-wysihtml5-insert-image-url input-xlarge"></div><div class="modal-footer"><a href="#" class="btn" data-dismiss="modal">Cancel</a><a href="#" class="btn btn-primary" data-dismiss="modal">Insert image</a></div></div><a class="btn" data-wysihtml5-command="insertImage" title="Insert image" href="javascript:;" unselectable="on"><i class="icon-picture"></i></a></li></ul><textarea id="inputEditorSimple" class="span10" rows="8" data-form="wysihtml5" style="display: none;" placeholder="Enter text ..."></textarea><input type="hidden" name="_wysihtml5_mode" value="1"><iframe class="wysihtml5-sandbox" security="restricted" allowtransparency="true" frameborder="0" width="0" height="0" marginwidth="0" marginheight="0" style="background-color: rgb(255, 255, 255); border-collapse: separate; border: 1px solid rgb(204, 204, 204); clear: none; display: inline-block; float: none; margin: 0px; outline: rgb(85, 85, 85) none 0px; outline-offset: 0px; padding: 4px 6px; position: static; top: auto; left: auto; right: auto; bottom: auto; z-index: auto; vertical-align: middle; text-align: start; box-sizing: border-box; -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset; box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; border-top-left-radius: 4px; width: 996.265625px; height: 170px;"></iframe>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputAuto">原始密码</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputAuto" class="grd-white">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputAuto">新密码</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputAuto" class="grd-white">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputAuto">重新输入</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputAuto" class="grd-white">
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">保存</button>
+                                    <button type="button" class="btn">取消</button>
+                                </div>
+                            </form>
+                            <!--/element-->
+                        </div>
+                    </div><!-- /box -->
+                </div><!-- /span -->
+            </div><!--/datatables-->
+            <!--/tables-->
+        </div><!--/content-body -->
+    </div><!-- /content -->
+</div>
+<!-- /span content -->
+
+
+
+               

@@ -1,0 +1,135 @@
+<!-- span content -->
+<div class="span9">
+<!-- content -->
+<div class="content">
+	<!-- content-header
+	<div class="content-header">
+		<ul class="content-header-action pull-right">
+			<li>
+				<a href="#">
+					<div class="badge-circle grd-green color-white"><i class="icofont-plus-sign"></i></div>
+					<div class="action-text color-green">8765 <span class="helper-font-small color-silver-dark">Visits</span></div>
+				</a>
+			</li>
+			<li class="divider"></li>
+			<li>
+				<a href="#">
+					<div class="badge-circle grd-teal color-white"><i class="icofont-user-md"></i></div>
+					<div class="action-text color-teal">1437 <span class="helper-font-small color-silver-dark">Users</span></div>
+				</a>
+			</li>
+			<li class="divider"></li>
+			<li>
+				<a href="#">
+					<div class="badge-circle grd-orange color-white">$</div>
+					<div class="action-text color-orange">4367 <span class="helper-font-small color-silver-dark">Orders</span></div>
+				</a>
+			</li>
+		</ul>
+		<h2><i class="icofont-calendar"></i> 考勤维护</h2>
+	</div>/content-header -->
+	
+	<!-- content-breadcrumb -->
+	<div class="content-breadcrumb">
+		<!--breadcrumb-nav
+		<ul class="breadcrumb-nav pull-right">
+			<li class="divider"></li>
+			<li class="btn-group">
+				<a href="#" class="btn btn-small btn-link">
+					<i class="icofont-money"></i> Orders <span class="color-red">(+12)</span>
+				</a>
+			</li>
+			<li class="divider"></li>
+			<li class="btn-group">
+				<a href="#" class="btn btn-small btn-link">
+					<i class="icofont-user"></i> Users <span class="color-red">(+34)</span>
+				</a>
+			</li>
+			<li class="divider"></li>
+			<li class="btn-group">
+				<a href="#" class="btn btn-small btn-link dropdown-toggle" data-toggle="dropdown">
+					<i class="icofont-tasks"></i> Tasks
+					<i class="icofont-caret-down"></i>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Some Action</a></li>
+					<li><a href="#">Other Action</a></li>
+					<li class="divider"></li>
+					<li><a href="#">Something Else</a></li>
+				</ul>
+			</li>
+		</ul>/breadcrumb-nav-->
+		
+		<!--breadcrumb-->
+		<ul class="breadcrumb">
+			<li><a href="../system/dashboard"><i class="icofont-home"></i> 主面板</a> <span class="divider">&rsaquo;</span></li>
+			<li><a href="index">考勤管理</a> <span class="divider">&rsaquo;</span></li>
+			<li class="active">考勤维护</li>
+		</ul><!--/breadcrumb-->
+	</div><!-- /content-breadcrumb -->
+	
+	<!-- content-body -->
+	<div class="content-body">
+		<!-- calendar -->
+		<div class="row-fluid">
+			<div class="span9">
+				<div class="box corner-all">
+					<div class="box-header grd-white corner-top">
+						<span>我的考勤</span>
+					</div>
+					<div class="box-body">
+						<div id="calendar"></div>
+					</div>
+				</div>
+			</div>
+			<div class="span3">
+				<div class="box corner-all" style="display:none;" id="atten_panel">
+					<div class="box-header grd-white corner-top">
+						<span>考勤维护</span>
+					</div>
+					<div class="box-body">
+						<form class="" />
+							<div class="control-group">
+								<label class="control-label" for="inputSelect">原因</label>
+								<div class="controls">
+									<select id="reason" data-form="select2" style="width:100%" data-placeholder="Your Favorite Type of Bear">
+										<option />外出
+										<option />事假
+										<option />病假
+										<option />早退
+										<option />迟到
+										<option />出差
+										<option/>忘打卡
+										<option/>系统故障
+									</select>
+								</div>
+							</div>
+							
+							<div class="controls">
+								<label class="control-label" for="inputDate">时间</label>
+								<input type="text" id="dutyTime" class="grd-white" style='width:95%;'>
+								<label class="control-label" for="inputDate">格式：09:30:00-18:30:00</label>
+							</div>
+							<div class="box-body">
+							    <button type="button" class="btn btn-primary" id="btn-save">保存</button>
+							</div>
+							<!--div class="control-group">
+								<label class="control-label" for="inputDate">日期</label>
+								<div class="controls" id="upgradeDate">
+									<div class="input-append date" data-form="datepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+										<input id="inputDate" class="grd-white" style="width:80%" data-form="datepicker" size="16" type="text" value="12-02-2012" />
+										<span class="add-on"><i class="icon-th"></i></span>
+									</div>
+								</div>
+							</div-->
+						</form>
+									
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/calendar-->
+	</div><!--/content-body -->
+</div><!-- /content -->
+</div>
+<!-- /span content -->

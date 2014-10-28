@@ -1,0 +1,85 @@
+<!-- span content -->
+<div class="span9">
+    <!-- content -->
+    <div class="content">
+        <!-- content-breadcrumb -->
+        <div class="content-breadcrumb">                            
+            <!--breadcrumb-->
+            <ul class="breadcrumb">
+                <li><a href="../system/dashboard"><i class="icofont-home"></i> 主面板</a> <span class="divider">&rsaquo;</span></li>
+		<li><a href="index">考勤管理</a> <span class="divider">&rsaquo;</span></li>
+		<li class="active">考勤记录</li>
+            </ul><!--/breadcrumb-->
+        </div><!-- /content-breadcrumb -->
+        <!-- content-body -->
+        <div class="content-body">
+            <!-- tables -->
+            <!--datatables-->
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="box corner-all">
+                        <div class="box-header grd-white corner-top">
+                            <!--div class="header-control">
+                                <a data-box="collapse"><i class="icofont-caret-up"></i></a>
+                                <a data-box="close" data-hide="bounceOutRight">&times;</a>
+                            </div-->
+                            <span>考勤记录</span>
+                        </div>
+			
+                        <div class="box-body"><!--form method="post" action="/"-->
+
+			    <div class="control-group pull-left" style="margin-right:20px;">
+				    <div class="controls">
+					<select id="group_select" data-form="select2" style="width:200px; margin-right:20px;" data-placeholder="Your Favorite Type of Bear">
+					</select>
+				    </div>
+			    </div>
+			    <div class="control-group pull-left" style="margin-right:20px;">
+				<div class="controls">
+					<div class="input-append date" data-form="datepicker" data-date="2014-03-01" data-date-format="yyyy-mm-dd">
+					    <input style="width:150px;" id="start_date" class="grd-white" size="16" type="text" value="2014-03-01" readonly="true"/>
+					    <span class="add-on"><i class="icon-th"></i></span>
+					</div>
+				</div>
+			    </div>
+			    <div class="control-group pull-left" style="margin-right:20px;">
+				<div class="controls">
+					<div class="input-append date" data-form="datepicker" data-date="2014-03-31" data-date-format="yyyy-mm-dd">
+					    <input style="width:150px;" id="end_date" class="grd-white" size="16" type="text" value="2014-03-31" readonly="true"/>
+					    <span class="add-on"><i class="icon-th"></i></span>
+					</div>
+				</div>
+			    </div>
+			    <p class="pull-left">
+			        <button type="button" class="btn btn-small btn-primary" id="btn-search">查询</button>
+                                <button type="button" class="btn btn-small btn-primary" id="btn-export">导出Excel</button>
+			    </p>
+			    <div style="clear:both;"></div>
+
+                            <table id="attendance_list" class="table table-bordered table-striped responsive">
+                                <thead>
+                                    <tr>
+                                        <th>姓名</th>
+                                        <th>考勤日期</th>
+                                        <th>工作时间</th>
+					<th>工作时长</th>
+                                        <th>考勤状态</th>
+                                        <th>维护后时间</th>
+                                        <th>维护后时长</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+				   
+                                </tbody>
+                            </table>
+
+                        </div><!-- /box-body -->
+                    </div><!-- /box -->
+                </div><!-- /span -->
+            </div><!--/datatables-->
+            <!--/tables-->
+        </div><!--/content-body -->
+    </div><!-- /content -->
+</div>
+<!-- /span content -->
+               

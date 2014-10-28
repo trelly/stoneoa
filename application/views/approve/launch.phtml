@@ -1,0 +1,112 @@
+<!-- span content -->
+ <div class="span9">
+     <!-- content -->
+     <div class="content">
+         <!-- content-header 
+         <div class="content-header">
+             <ul class="content-header-action pull-right">
+                 <li>
+                     <a href="#">
+                         <div class="badge-circle grd-green color-white"><i class="icofont-plus-sign"></i></div>
+                         <div class="action-text color-green">8765 <span class="helper-font-small color-silver-dark">Visits</span></div>
+                     </a>
+                 </li>
+                 <li class="divider"></li>
+                 <li>
+                     <a href="#">
+                         <div class="badge-circle grd-teal color-white"><i class="icofont-user-md"></i></div>
+                         <div class="action-text color-teal">1437 <span class="helper-font-small color-silver-dark">Users</span></div>
+                     </a>
+                 </li>
+                 <li class="divider"></li>
+                 <li>
+                     <a href="#">
+                         <div class="badge-circle grd-orange color-white">$</div>
+                         <div class="action-text color-orange">4367 <span class="helper-font-small color-silver-dark">Orders</span></div>
+                     </a>
+                 </li>
+             </ul>
+             <h2><i class="icofont-table"></i> Tables</h2>
+         </div> /content-header -->
+
+         <!-- content-breadcrumb -->
+         <div class="content-breadcrumb">
+             <!--breadcrumb-nav
+             <ul class="breadcrumb-nav pull-right">
+                 <li class="divider"></li>
+                 <li class="btn-group">
+                     <a href="#" class="btn btn-small btn-link">
+                         <i class="icofont-money"></i> Orders <span class="color-red">(+12)</span>
+                     </a>
+                 </li>
+                 <li class="divider"></li>
+                 <li class="btn-group">
+                     <a href="#" class="btn btn-small btn-link">
+                         <i class="icofont-user"></i> Users <span class="color-red">(+34)</span>
+                     </a>
+                 </li>
+                 <li class="divider"></li>
+                 <li class="btn-group">
+                     <a href="#" class="btn btn-small btn-link dropdown-toggle" data-toggle="dropdown">
+                         <i class="icofont-tasks"></i> Tasks
+                         <i class="icofont-caret-down"></i>
+                     </a>
+                     <ul class="dropdown-menu">
+                         <li><a href="#">Some Action</a></li>
+                         <li><a href="#">Other Action</a></li>
+                         <li class="divider"></li>
+                         <li><a href="#">Something Else</a></li>
+                     </ul>
+                 </li>
+             </ul>/breadcrumb-nav-->
+
+             <!--breadcrumb-->
+             <ul class="breadcrumb">
+                 <li><a href="../system/dashboard"><i class="icofont-home"></i> 主面板</a> <span class="divider">&rsaquo;</span></li>
+		 <li><a href="list">审批</a> <span class="divider">&rsaquo;</span></li>
+                 <li class="active">我发起的</li>
+             </ul><!--/breadcrumb-->
+         </div><!-- /content-breadcrumb -->
+
+         <!-- content-body -->
+         <div class="content-body">
+             <!-- tables -->
+             <!--datatables tools-->
+             <div class="row-fluid">
+                 <div class="span12">
+                     <div class="box corner-all">
+                         <div class="box-header grd-white corner-top">
+                             <!--div class="header-control">
+                                 <a data-box="collapse"><i class="icofont-caret-up"></i></a>
+                                 <a data-box="close" data-hide="bounceOutRight">&times;</a>
+                             </div-->
+                             <span>我发起的</span>
+                         </div>
+                         <div class="box-body">
+			     <ul class="nav nav-tabs" id="approveTabs">
+				<li class="active"><a data-toggle="tab" href="#tab1" node-id="0">处理中</a></li>
+				<li class=""><a data-toggle="tab" href="#tab2" node-id="1">已完成</a></li>
+				<!--li class=""><a data-toggle="tab" href="#boxtab-bellow-3">被驳回</a></li-->
+			    </ul>
+                             <table id="datatables" class="table table-bordered table-striped responsive mail">
+                                 <thead>
+                                     <tr>
+                                         <th>审批名称</th>
+                                         <th>发起时间</th>
+                                         <th>审批状态</th>
+                                         <th>当前归属</th>
+                                     </tr>
+                                 </thead>
+                                 <tbody>
+                                     
+                                 </tbody>
+                             </table>
+                         </div><!-- /box-body -->
+                     </div><!-- /box -->
+                 </div><!-- /span -->
+             </div><!--/datatables tools-->
+             <!--/tables-->
+         </div><!--/content-body -->
+     </div><!-- /content -->
+ </div>
+<!-- /span content -->

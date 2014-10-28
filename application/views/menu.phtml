@@ -1,0 +1,344 @@
+<aside class="side-left">
+    <ul class="sidebar">
+        <li <?=$controller == 'dashboard'?'class="active"':''?>>
+            <a href="/system/dashboard" title="快捷面板">
+                <div class="helper-font-24">
+                    <i class=" icofont-dashboard"></i>
+                </div>
+                <span class="sidebar-text">快捷面板</span>
+            </a>
+        </li>
+        <li <?=$controller == 'user'?'class="active"':''?>>
+            <a href="/user" title="用户管理">
+                <div class="helper-font-24">
+                    <i class="icofont-user"></i>
+                </div>
+                <span class="sidebar-text">用户管理</span>
+            </a>
+            <ul class="sub-sidebar-form corner-top shadow-white">                
+                <li>
+                    <a href="/user/add" title="新建用户" class="corner-all">
+                        <i class="icofont-plus-sign"></i>
+                        <span class="sidebar-text">新建用户</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li <?=$controller == 'group'?'class="active"':''?>>
+            <a href="/group" title="部门管理">
+                <div class="helper-font-24">
+                    <i class="icofont-group"></i>
+                </div>
+                <span class="sidebar-text">部门管理</span>
+            </a>
+            <ul class="sub-sidebar-form corner-top shadow-white">                
+                <li>
+                    <a href="/group/add" title="新建用户" class="corner-all">
+                        <i class="icofont-plus-sign"></i>
+                        <span class="sidebar-text">新建部门</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li <?=$controller == 'role'?'class="active"':''?>>
+            <a href="/role/list" title="角色管理">
+                <div class="helper-font-24">
+                    <i class="icofont-key"></i>
+                </div>
+                <span class="sidebar-text">角色管理</span>
+            </a>
+            <ul class="sub-sidebar-form corner-top shadow-white">                
+                <li>
+                    <a href="/role/add" title="新建用户" class="corner-all">
+                        <i class="icofont-plus-sign"></i>
+                        <span class="sidebar-text">新建角色</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!--li>
+            <a href="/system/component" title="菜单管理">
+                <div class="helper-font-24">
+                    <i class="icofont-list"></i>
+                </div>
+                <span class="sidebar-text">菜单管理</span>
+            </a>
+        </li-->
+        <li <?=$controller == 'memo'?'class="active"':''?>>
+            <a href="/memo" title="我的备忘">
+                <div class="helper-font-24">
+                    <i class=" icofont-calendar"></i>
+                </div>
+                <span class="sidebar-text">我的备忘</span>
+            </a>
+        </li>
+        <li <?=$controller == 'attendance'?'class="active"':''?>>
+            <a href="javascript:;" title="考勤管理">
+                <div class="helper-font-24">
+                    <i class=" icofont-check"></i>
+                </div>
+                <span class="sidebar-text">考勤管理</span>
+            </a>
+	    <ul class="sub-sidebar-form corner-top shadow-white">                
+                <li>
+                    <a href="/attendance" title="考勤维护" class="corner-all">
+                        <i class="icofont-table"></i>
+                        <span class="sidebar-text">考勤维护</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/attendance/record" title="考勤记录" class="corner-all">
+                        <i class="icofont-list"></i>
+                        <span class="sidebar-text">考勤记录</span>
+                    </a>
+                </li>
+		<!--li>
+                    <a href="/attendance/manages" title="考勤管理" class="corner-all">
+                        <i class="icofont-tasks"></i>
+                        <span class="sidebar-text">考勤设置</span>
+                    </a>
+                </li-->
+            </ul>
+        </li>
+        <!--li <?=$controller == 'contact'?'class="active"':''?>>
+            <a href="/contact/list" title="联系人">
+                <div class="helper-font-24">
+                    <i class=" icofont-phone-sign"></i>
+                </div>
+                <span class="sidebar-text">联系人</span>
+            </a>
+        </li-->
+	<li <?=$controller == 'notice'?'class="active"':''?>>
+            <a href="javascript:;" title="公告管理">
+                <div class="helper-font-24">
+                    <i class="icofont-list-alt"></i>
+                </div>
+                <span class="sidebar-text">公告管理</span>
+            </a>
+	    <ul class="sub-sidebar-form corner-top shadow-white">    
+		<li>
+                    <a href="/notice/list" title="浏览公告" class="corner-all">
+                        <i class="icofont-reorder"></i>
+                        <span class="sidebar-text">浏览公告</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/notice/set" title="发布公告" class="corner-all">
+                        <i class=" icofont-edit"></i>
+                        <span class="sidebar-text">发布公告</span>
+                    </a>
+                </li>
+		<li>
+                    <a href="/notice/manages" title="公告管理" class="corner-all">
+                        <i class=" icofont-cog"></i>
+                        <span class="sidebar-text">公告管理</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+	
+	<li <?=$controller == 'file'?'class="active"':''?>>
+            <a href="/file/private" title="我的网盘">
+                <div class="helper-font-24">
+                    <i class="icofont-cloud"></i>
+                </div>
+                <span class="sidebar-text">我的网盘</span>
+            </a>
+	    <!--ul class="sub-sidebar-form corner-top shadow-white">                
+                <li>
+                    <a href="/file/index" title="公共文件夹" class="corner-all">
+                        <i class="icofont-copy"></i>
+                        <span class="sidebar-text">公共文件夹</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/file/private" title="个人文件夹" class="corner-all">
+                        <i class="icofont-file"></i>
+                        <span class="sidebar-text">个人文件夹</span>
+                    </a>
+                </li>
+            </ul-->
+        </li>
+
+	<li <?=$controller == 'project'?'class="active"':''?>>
+            <a href="javascript:;" title="项目管理">
+		<div class="badge badge-important" id="project_l_count"></div>
+                <div class="helper-font-24">
+                    <i class="icofont-ok-sign"></i>
+                </div>
+                <span class="sidebar-text">项目管理</span>
+            </a>
+	    <ul class="sub-sidebar-form corner-top shadow-white">                
+                <li>
+                    <a href="/project/new" title="新建项目" class="corner-all">
+                        <i class="icofont-plus-sign"></i>
+                        <span class="sidebar-text">新建项目</span>
+                    </a>
+                </li>
+		<li class="divider"></li>
+                <li>
+                    <a href="/project/list_new" title="我的项目" class="corner-all">
+                        <i class="icofont-list"></i>
+                        <span class="sidebar-text">我的项目</span>
+                    </a>
+                </li>
+		<li>
+                    <a href="/project/all" title="全部项目" class="corner-all">
+                        <i class="icofont-list"></i>
+                        <span class="sidebar-text">全部项目</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li <?=$controller == 'approve'?'class="active"':''?>>
+            <a href="javascript:;">
+		<div class="badge badge-important" id="approve_l_count"></div>
+                <div class="helper-font-24">
+                    <i class=" icofont-briefcase"></i>
+                </div>
+                <span class="sidebar-text">审批管理</span>
+            </a>
+            <ul class="sub-sidebar-form corner-top shadow-white">                
+                <!--li>
+                    <a href="/approve" title="全部审批" class="corner-all">
+                        <i class=" icofont-list"></i>
+                        <span class="sidebar-text">全部审批</span>
+                    </a>
+                </li-->
+		<li>
+                    <a href="/approve/launch" title="我发起的" class="corner-all">
+                        <i class=" icofont-list"></i>
+                        <span class="sidebar-text">我发起的</span>
+                    </a>
+                </li>
+		<li>
+                    <a href="/approve/deal" title="我处理的" class="corner-all">
+                        <i class=" icofont-list"></i>
+                        <span class="sidebar-text">我处理的</span>
+                    </a>
+                </li>
+		<li class="divider"></li>
+		<li>
+                    <a href="/approve/create" title="新建审批" class="corner-all">
+                        <i class="icofont-plus-sign"></i>
+                        <span class="sidebar-text">新建审批</span>
+                    </a>
+                </li>
+		<li class="divider"></li>
+                <li>
+                    <a href="/approve/set" title="设置审批" class="corner-all">
+                        <i class="icofont-edit"></i>
+                        <span class="sidebar-text">设置审批</span>
+                    </a>
+                </li>
+            </ul>
+        </li>  
+        <li <?=$controller == 'mail'?'class="active"':''?>>
+            <a href="javascript:;">
+                <!--div class="badge badge-important">3</div-->
+                <div class="helper-font-24">
+                    <i class="icofont-envelope"></i>
+                </div>
+                <span class="sidebar-text">邮件管理</span>
+            </a>
+            <ul class="sub-sidebar-form corner-top shadow-white">                
+                <!--li>
+                    <a href="/mail" class="corner-all">
+                        <i class=" icofont-ok-sign"></i>
+                        <span class="sidebar-text">收件箱</span>
+                    </a>
+                </li-->
+                <?php foreach($menu_mail as $item):?>
+		<li>
+                    <a href="/mail/list/mailbox/<?=$item['id']?>" class="corner-all">
+                        <i class="icon-cog"></i>
+                        <span class="sidebar-text"><?=$item['name']?></span>
+                    </a>
+                </li>
+                <?php endforeach;?>                
+                <li class="divider"></li>
+                <li>
+                    <a href="/mail/send" class="corner-all">
+                        <i class="icofont-plus-sign"></i>
+                        <span class="sidebar-text">新建邮件</span>
+                    </a>
+                </li>
+		<li class="divider"></li>
+                <li>
+                    <a href="/mail/manages" class="corner-all">
+                        <i class="icon-cog"></i>
+                        <span class="sidebar-text">管理邮箱账号</span>
+                    </a>
+                </li>
+            </ul>
+        </li>                            
+        <li>
+            <a href="/system/monitor" title="系统监控">
+                <div class="helper-font-24">
+                    <i class="icofont-bar-chart"></i>
+                </div>
+                <span class="sidebar-text">系统监控</span>
+            </a>
+        </li>
+        <!--li>
+            <a href="/system/component" title="系统设置">
+                <div class="helper-font-24">
+                    <i class="icofont-cogs"></i>
+                </div>
+                <span class="sidebar-text">系统设置</span>
+            </a>
+        </li-->
+        <!--li>
+            <a href="javascript:void(0)" title="more">
+                <div class="badge badge-important">5</div>
+                <div class="helper-font-24">
+                    <i class="icofont-th-large"></i>
+                </div>
+                <span class="sidebar-text">更多</span>
+            </a>
+            <ul class="sub-sidebar corner-top shadow-silver-dark">
+                <li>
+                    <a href="/error/e404" title="not found">
+                        <div class="helper-font-24">
+                            <i class="icofont-warning-sign"></i>
+                        </div>
+                        <span class="sidebar-text">404</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html" title="login">
+                        <div class="helper-font-24">
+                            <i class="icofont-lock"></i>
+                        </div>
+                        <span class="sidebar-text">Login</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="invoice.html" title="invoice">
+                        <div class="helper-font-24">
+                            <i class="icofont-barcode"></i>
+                        </div>
+                        <span class="sidebar-text">Invoice</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pricing.html" title="pricing table">
+                        <div class="helper-font-24">
+                            <i class="icofont-briefcase"></i>
+                        </div>
+                        <span class="sidebar-text">Pricing</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="bonus-page/resume/index.html" title="resume">
+                        <div class="helper-font-24">
+                            <i class="icofont-user"></i>
+                        </div>
+                        <span class="sidebar-text">Resume</span>
+                    </a>
+                </li-->
+            </ul>
+        </li>
+    </ul>
+</aside>

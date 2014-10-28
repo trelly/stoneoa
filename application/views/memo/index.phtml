@@ -1,0 +1,74 @@
+<!-- span content -->
+<div class="span9">
+    <!-- content -->
+    <div class="content">
+       
+
+        <!-- content-breadcrumb -->
+        <div class="content-breadcrumb">
+            
+
+            <!--breadcrumb-->
+            <ul class="breadcrumb">
+                <li><a href="../system/dashboard"><i class="icofont-home"></i> 主板面</a> <span class="divider">&rsaquo;</span></li>
+                <li class="active">我的备忘</li>
+            </ul><!--/breadcrumb-->
+        </div><!-- /content-breadcrumb -->
+
+        <!-- content-body -->
+        <div class="content-body">
+            <!-- calendar -->
+            <div class="row-fluid">
+                <div class="span9">
+                    <div class="box corner-all">
+                        <div class="box-header grd-white corner-top">
+                            <span>备忘录</span>
+                        </div>
+                        <div class="box-body">
+                            <div id="calendar"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="box corner-all" id="panel">
+                        <div class="box-header grd-white corner-top">
+                            <span>添加条目</span>
+                        </div>
+                        <div class="box-body">
+				<!--input type="text" style="width:100%" placeholder="备忘时间" /-->
+				<select id="SelectTime" data-form="select2" style="width:100%" placeholder="选择状态">
+				<?php foreach ($types as $type){ ?>
+				    <option value="<?=$type["tag"]?>"><?=$type["desc"]?></option>
+				<?php }?>
+				</select>
+				<textarea style="width:96%;margin:10px 0;" placeholder="备忘内容"  id="text-write-memo"></textarea>
+				<input type="hidden" id="memo-update-id" />
+				<button type="button" class="btn btn-primary" id="btn-write-memo">确定</button>
+			</div>
+			<div class="box-header grd-white corner-top" style="margin-top:20px;">
+                            <span>需处理条目</span>
+                        </div>
+                        <div class="box-body" id="rightEvContent">
+			    <?php foreach ($rlists as $event){ ?>
+			    <div data-id="<?=$event["id"]?>" class='external-event label <?php if($event["status"]==0){ echo "btn-primary"; }elseif($event["status"]==1) { echo "btn-danger"; }?>' style='display: block;padding: 5px;margin-bottom: 10px;'><input type='checkbox' data-form="uniform" /><?=$event["content"]?></div>
+			    <?php }?>
+                            <!--label for='drop-remove'><input type='checkbox' data-form="uniform" id='drop-remove' /> <small class="helper-font-small">remove after drop</small></label-->
+                        </div>
+			<div class="box-header grd-white corner-top" style="margin-top:20px;">
+                            <span>已完成条目</span>
+                        </div>
+			<div class="box-body" id="overEvContent">
+			    <?php foreach ($overlist as $event){ ?>
+			    <div data-id="<?=$event["id"]?>" class='external-event label label-success' style='display: block;padding: 5px;margin-bottom: 10px;'><em class="icon-remove" style="float:right;cursor:pointer;" data-id="<?=$event["id"]?>"></em><?=$event["content"]?></div>
+			    <?php }?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/calendar-->
+        </div><!--/content-body -->
+    </div><!-- /content -->
+</div>
+<!-- /span content -->
+                
+ 

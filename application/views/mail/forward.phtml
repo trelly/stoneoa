@@ -1,0 +1,149 @@
+<div class="span9">
+    <!-- content -->
+    <div class="content">
+        <!-- content-breadcrumb -->
+        <div class="content-breadcrumb">
+            <!--breadcrumb-nav-->
+            <ul class="breadcrumb-nav pull-right">
+                <li class="divider"></li>
+                <li class="btn-group">
+                    <a class="btn btn-small btn-link" target="_blank" href="invoice-print.html?invoice=247" title="print invoice">
+                        <i class="icofont-print"></i> Print Invoice
+                    </a>
+                </li>
+            </ul><!--/breadcrumb-nav-->
+
+            <!--breadcrumb-->
+            <ul class="breadcrumb">
+                <li><a href="../system/dashboard"><i class="icofont-home"></i> 主面板</a> <span class="divider">&rsaquo;</span></li>
+                <li><a href="list">邮件列表</a> <span class="divider">&rsaquo;</span></li>
+                <li class="active">邮件详情</li>
+            </ul><!--/breadcrumb-->
+        </div><!-- /content-breadcrumb -->
+
+        <!-- content-body -->
+        <div class="content-body">
+                <!--datatables tools-->
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="box corner-all">
+                        <div class="box-header grd-white corner-top">
+                            <div class="header-control">
+                                <a data-box="collapse"><i class="icofont-caret-up"></i></a>
+                                <a data-box="close" data-hide="bounceOutRight">&times;</a>
+                            </div>
+                            <span>邮件详情</span>
+                        </div>
+                        <div class="box-body">
+                            <div class="row-fluid">
+                               <div class="tbl">
+                                   <div id="datatables_length" class="dataTables_length"></div>
+                                   <div class="DTTT" data-mail-id="<?=$id?>" data-mailbox-id="<?=$mailbox?>">
+                                       <a class="btn DTTT_button_text" href="/mail/list/mailbox/<?=$mailbox?>" id="btn-back"><span>返回</span></a>
+                                       <a class="btn DTTT_button_text" id="send"><span>发送</span></a>
+                                   </div>
+                               </div>
+                           </div>
+			   <div class="control-group">
+				   <form id="mailbox" class="form-horizontal" />
+                                        <div class="control-group">
+                                            <label class="control-label" for="inputSelectMulti">收件人</label>
+                                            <div class="controls">
+                                                <input name="reseiver" type="text" class="grd-white" placeholder="多个邮箱请用,分隔"/>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="inputSelectMulti">抄送</label>
+                                            <div class="controls">
+                                                <input name="ccreseiver" type="text" class="grd-white" placeholder="多个邮箱请用,分隔"/>
+                                            </div>
+                                        </div>                                                        
+                                        <div class="control-group">
+                                            <label class="control-label" for="inputAuto">主题</label>
+                                            <div class="controls">
+                                                <input name="subject" type="text" class="grd-white" />
+                                            </div>
+                                        </div>
+                                    	<div class="control-group">
+					    <label class="control-label" for="inputUpload">附件</label>
+					    <div class="controls">
+						<input type="file" data-form="uniform" id="upload" />
+					    </div>
+					    <!--div id="attachment"></div-->
+					</div>
+                                        <div class="control-group" id="attachment">
+					    <label class="control-label" for="inputUpload"></label>
+					</div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="inputEditorSimple">内容</label>
+                                            <div class="controls">
+                                                <div class="gallery">
+                                                        <div id="editor" style="height:300px;" name="content"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+				</div>
+                                   <div class="row-fluid invoice-table">
+                               <div class="span6">
+                                   <p><h4><?=$message->subject?></h4></p>
+                                    <p class="m-box">发件人：<span><?=$message->from?></span></p>
+                                    <p class="m-box">时间：<span><?=$message->date?></span></p>
+                                    <p class="m-box">收件人：<span><?=$message->to?></span></p>
+                                </div>
+                           </div>
+
+                           <!-- invoice -->
+                            <div id="invoice-container" class="invoice-container">
+                                <div class="page-header">
+                                    <iframe id="mail" frameborder="no" width="100%" src="/mail/content/mailbox/<?=$mailbox?>/id/<?=$id?>"></iframe>
+                                </div>
+                                <!--div class="page-header email-fujian">
+                                        <h4>附件（1个）</h4>
+                                        <p><a href="#" style="margin-right:5px;">普通附件</a><a href="#" ><span class="icon-search"></span>附件预览</a></p>
+                                        <dl>
+                                                <dd>西安大洋灯带.rar(304.12k)</dd>
+                                                <dd><a href="#" style="margin-right:5px;">下载</a><a href="#" style="margin-right:5px;">打开</a><a href="#" >预览</a></dd>
+                                        </dl>
+                                </div-->
+                            </div>
+                            <!--/invoice-->
+
+                            <!--element-->
+                            <!--form class="form-horizontal" />
+                                <div class="control-group">
+                                    <label class="control-label" for="inputEditorSimple">邮件回复</label>
+                                    <div class="controls">
+                                        <div id="editor"></div>
+                                    </div>
+                                </div>
+                                <div class="form-actions" style="margin:0;">
+                                    <button type="button" class="btn">取消</button>
+                                    <button type="submit" class="btn btn-primary">发送</button>
+                                </div>
+                            </form-->
+                            <!--/element-->
+
+                            <!--div class="row-fluid invoice-table">
+                                <a class="" href="#">下一封未读：名称</a>
+                            </div-->
+
+                            <div class="row-fluid invoice-table">
+                               <div class="tbl">
+                                   <div id="datatables_length" class="dataTables_length"></div>
+                                   <div class="DTTT" data-mail-id="<?=$id?>" data-mailbox-id="<?=$mailbox?>">
+                                       <a class="btn DTTT_button_text" href="/mail/list/mailbox/<?=$mailbox?>" id="btn-back"><span>返回</span></a>
+                                       <a class="btn DTTT_button_text" node-id="btn-replay"><span>发送</span></a>
+                                   </div>
+                               </div>
+                           </div>
+
+                        </div><!-- /box-body -->
+                    </div><!-- /box -->
+                </div><!-- /span -->
+            </div><!--/datatables tools-->
+        </div><!--/content-body -->
+    </div>
+    <!-- /content -->
+</div>
+<!-- /span content -->

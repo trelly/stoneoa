@@ -1,0 +1,81 @@
+<!-- span content -->
+<div class="span9">
+    <!-- content -->
+    <div class="content">
+        <!-- content-breadcrumb -->
+        <div class="content-breadcrumb">                            
+            <!--breadcrumb-->
+            <ul class="breadcrumb">
+                <li><a href="../system/dashboard"><i class="icofont-home"></i> 首页</a> <span class="divider">&rsaquo;</span></li>
+                <li class="active">邮件管理</li>
+            </ul><!--/breadcrumb-->
+        </div><!-- /content-breadcrumb -->
+        <!-- content-body -->
+                        <div class="content-body">
+                            <!-- tables -->
+                            <!--datatables tools-->
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <div class="box corner-all">
+                                        <div class="box-header grd-white corner-top">
+                                            <div class="header-control">
+                                                <a data-box="collapse"><i class="icofont-caret-up"></i></a>
+                                                <a data-box="close" data-hide="bounceOutRight">&times;</a>
+                                            </div>
+                                            <span><?=$account['name']?></span>
+                                        </div>
+                                        <div class="box-body">
+                                            <table id="datatables" class="table table-bordered table-striped responsive mail">
+                                                <thead>
+                                                    <tr>
+                                                        <!--th><input type="checkbox" data-form="uniform" name="inputCheckbox"></th-->
+                                                        <th style="width:250px;">邮件名</th>
+                                                        <th>发送人</th>
+                                                        <th>时间</th>
+                                                        <th>附件</th>
+							<th>操作</th>
+                                                    </tr> 
+                                                </thead>
+                                                <tbody>
+                                                    <?php $i=0; ?>
+                                                    <?php if(count($maillist)>0):?>
+                                                    <?php foreach ($maillist as $row):?>
+						    <tr class="odd gradeA">
+							<!--td>
+							<?php //var_dump($row)
+							    //$flags = $row->getFlags();
+							    if($row->hasFlag('\Seen')):
+							?>
+							    <i class="icofont-envelope"></i>
+							<?php else:?>
+							    <i class="icofont-envelope-alt"></i>
+							<?php endif;?>
+							</td-->
+							<!--td><input type="checkbox" data-form="uniform" name="inputCheckbox" ></td-->
+                                                        <td><a target="detail" href="/mail/read/mailbox/<?=$mailbox?>/id/<?=++$i?>"><?=$row->subject?></a></td>
+							<td><a href=""><?=$row->from?></a></td>
+							<td><a href=""><?=date('Y/m/d h:i:s',strtotime($row->date))?></a></td>
+							<td><a href=""><?=$row->getSize()?>字节</a></td>
+							<td class="center">
+							    <!--a class='btn btn-small' title="编辑" href=""><i class="icofont-edit"></i></a-->
+							    <a class='btn btn-small' node-act="del"  data-mail-id='<?=$i?>' data-mailbox-id="<?=$mailbox?>" title="删除"><i class="icofont-remove-sign"></i></a>
+							</td>
+						    </tr>
+						    <?php endforeach;?>
+                                                    <?php endif;?>
+                                                </tbody>
+                                            </table>
+                                            
+                                        </div><!-- /box-body -->
+                                    </div><!-- /box -->
+                                </div><!-- /span -->
+                            </div><!--/datatables tools-->
+                            <!--/tables-->
+                        </div><!--/content-body -->
+    </div><!-- /content -->
+</div>
+<!-- /span content -->
+
+
+
+               

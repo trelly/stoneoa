@@ -1,0 +1,75 @@
+<!-- span content -->
+<div class="span9">
+    <!-- content -->
+    <div class="content">
+        <!-- content-breadcrumb -->
+        <div class="content-breadcrumb">                            
+            <!--breadcrumb-->
+            <ul class="breadcrumb">
+                <li><a href="../system/dashboard"><i class="icofont-home"></i> 首页</a> <span class="divider">&rsaquo;</span></li>
+                <li class="active">邮件管理</li>
+            </ul><!--/breadcrumb-->
+        </div><!-- /content-breadcrumb -->
+        <!-- content-body -->
+                        <div class="content-body">
+                            <!-- tables -->
+                            <!--datatables tools-->
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <div class="box corner-all">
+                                        <div class="box-header grd-white corner-top">
+                                            <!--div class="header-control">
+                                                <a data-box="collapse"><i class="icofont-caret-up"></i></a>
+                                                <a data-box="close" data-hide="bounceOutRight">&times;</a>
+                                            </div-->
+                                            <span>管理其它邮箱</span>
+                                        </div>
+					
+					
+                                        <div class="box-body">
+					    <div class="control-group">
+						<a href="other" class="btn backward">添加其它邮箱</a>
+					    </div>
+                                            <table id="maillist" class="table table-bordered table-striped responsive mail">
+                                                <thead>
+                                                    <tr>
+                                                        <!--th><input type="checkbox" data-form="uniform" name="inputCheckbox"></th-->
+                                                        <th>邮箱名</th>
+                                                        <th>邮箱服务地址</th>
+                                                        <th>邮箱账号</th>
+                                                        <th>端口号</th>
+							<th>操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php foreach ($accounts as $row):?>
+						    <tr class="odd gradeA" data-id="<?=$row['id']?>">
+                                                        <!--td><input type="checkbox" value="<?=$row['id']?>" data-form="uniform" name="inputCheckbox" ></td-->
+							<td><a href="/mail/list/mailbox/<?=$row['id']?>"><?=$row['name']?></a></td>
+							<td><?=$row['server']?></td>
+							<td><?=$row['username']?></td>
+							<td><?=$row['port']?></td>
+							<td class="center">
+							    <a class='btn btn-small' title="编辑" href="/mail/edit/id/<?=$row['id']?>"><i class="icofont-edit"></i></a>
+							    <a class='btn btn-small' title="删除" node-act="del"><i class="icofont-remove-sign"></i></a>
+                                                            
+                                                            <?php if($row['default'] == 1){?><span>默认邮箱</span><?php }else{?><a class='btn btn-small' title="设置为默认邮箱" node-act="setdefault"><i class="icofont-check"></i>设置为默认</a><?php }?>
+							</td>
+						    </tr>
+						    <?php endforeach;?>
+                                                </tbody>
+                                            </table>
+                                            
+                                        </div><!-- /box-body -->
+                                    </div><!-- /box -->
+                                </div><!-- /span -->
+                            </div><!--/datatables tools-->
+                            <!--/tables-->
+                        </div><!--/content-body -->
+    </div><!-- /content -->
+</div>
+<!-- /span content -->
+
+
+
+               

@@ -1,0 +1,52 @@
+<base target="_blank">
+</head>
+<?php
+    $type = array(
+        'text/plain',
+        'text/html'
+    );
+     if($message->isMultipart()):
+         for($i=1;$i<=$message->countParts();$i++){
+            $submessage = $message->getPart($i);
+            if($submessage->isMultipart()){
+                for($j=1;$j<=$submessage->countParts();$j++){
+                    $part = $submessage->getPart($i);
+                    //$headers = $part->getHeaders();
+                    $type = $part->getHeader('contenttype')->getType();
+                    if($type == 'text/plain' || $type == 'text/html'){
+                        $charset = $part->getHeader('contenttype')->getParameter('charset');
+                        '<meta http-equiv=Content-Type content="'.$type.';charset='.$charset.'">';
+                    }
+                    $encode = $part->getHeader('contenttransferencoding')->getFieldValue();
+                    if($encode == 'base64'){
+                        echo base64_decode($part->getContent());
+                    }
+                    //foreach ($headers as $header){
+                        //echo $header->getFieldName().":".$header->getFieldValue().'<br>';
+                    //}
+                }
+            }else{
+                $headers = $submessage->getHeaders();
+                foreach($headers as $header){
+                    //echo $header->getFieldName().":".$header->getFieldValue().'<br>'; 
+                }
+            }
+         }
+     else:
+         $type = $message->getHeader('contenttype')->getType();
+         $charset = $message->getHeader('contenttype')->getParameter('charset');
+         echo '<meta http-equiv=Content-Type content="'.$type.';charset='.$charset.'">';
+         $encode = $message->getHeader('contenttransferencoding')->getFieldValue();
+         if($encode == 'quoted-printable'){
+             echo quoted_printable_decode($message->getContent());
+         }  else {
+             echo base64_decode($message->getContent());
+         }
+         
+     endif;
+?>
+<script>
+    parent.document.getElementsByTagName("iframe")[0].height = document.body.scrollHeight;
+</script>    
+</body>
+</html>

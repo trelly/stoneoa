@@ -1,0 +1,52 @@
+<!-- span content -->
+<div class="span9">
+    <!-- content -->
+    <div class="content">
+        <!-- content-breadcrumb -->
+        <div class="content-breadcrumb">                            
+            <!--breadcrumb-->
+            <ul class="breadcrumb">
+                <li><a href="../system/dashboard"><i class="icofont-home"></i> 首页</a> <span class="divider">&rsaquo;</span></li>
+                <li class="active">部门管理</li>
+            </ul><!--/breadcrumb-->
+        </div><!-- /content-breadcrumb -->
+        <!-- content-body -->
+        <div class="content-body">
+            <!-- tables -->
+            <!--datatables-->
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="box corner-all">
+                        <div class="box-header grd-white corner-top">
+                            <!--div class="header-control">
+                                <a data-box="collapse"><i class="icofont-caret-up"></i></a>
+                                <a data-box="close" data-hide="bounceOutRight">&times;</a>
+                            </div-->
+                            <span>部门列表</span>
+                        </div>
+                        <div class="box-body">
+                            <table id="datatables" class="table table-bordered table-striped responsive">
+                                <thead>
+                                    <tr>
+                                        <th>部门名称</th>
+                                        <th>部门描述</th>
+                                        <th>状态</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($grouplist as $index => $group):?>
+					<tr data-tt-id='<?php if($group["pid"] != 0){?><?=$group["pid"]?>-<?php }?><?=$group["id"]?>' <?php if($group["pid"] != 0){?>data-tt-parent-id='<?=$group["pid"]?>'<?php }?>><td><?=$group["name"]?></td><td><?=$group["description"]?></td><td><?php if($group["status"] == 1){echo "激活";}else{echo "禁止";}?></td><td><?php if(!$_COOKIE['isAdmin']){ echo '<div style="display:none;">';} ?><a class="btn btn-small" title="编辑" href='/group/edit#id=<?=$group["id"]?>'><i class="icofont-edit"></i></a><a class="btn btn-small" title="删除" act="del" did='<?=$group["id"]?>'><i class="icofont-remove-sign"></i></a><?php if($_COOKIE['isAdmin']){ echo '</div>';} ?></td></tr>
+				    <?php endforeach;?>
+                                </tbody>
+                            </table>
+
+                        </div><!-- /box-body -->
+                    </div><!-- /box -->
+                </div><!-- /span -->
+            </div><!--/datatables-->
+            <!--/tables-->
+        </div><!--/content-body -->
+    </div><!-- /content -->
+</div>
+<!-- /span content -->

@@ -1,0 +1,125 @@
+<!-- span content -->
+<div class="span9">
+    <!-- content -->
+    <div class="content">
+        <!-- content-breadcrumb -->
+        <div class="content-breadcrumb">
+            <!--breadcrumb-nav
+            <ul class="breadcrumb-nav pull-right">
+                <li class="divider"></li>
+                <li class="btn-group">
+                    <a href="#" class="btn btn-small btn-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="icofont-cogs"></i> Controls
+                        <i class="icofont-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#element" class="scroll">Element</a></li>
+                        <li><a href="#validation" class="scroll">Validation</a></li>
+                        <li><a href="#wizard" class="scroll">Wizard</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#extending" class="scroll">Extending</a></li>
+                        <li><a href="#controls" class="scroll">Controls</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#buttons" class="scroll">Buttons</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="btn-group">
+                    <a href="#" class="btn btn-small btn-link">
+                        <i class="icofont-user"></i> Users <span class="color-red">(+34)</span>
+                    </a>
+                </li>
+            </ul>/breadcrumb-nav-->
+
+            <!--breadcrumb-->
+            <ul class="breadcrumb">
+                <li><a href="../system/dashboard"><i class="icofont-home"></i> 首页</a> <span class="divider">&rsaquo;</span></li>
+                <li><a href="list">部门管理</a> <span class="divider">&rsaquo;</span></li>
+                <li class="active">编辑部门</li>
+            </ul><!--/breadcrumb-->
+        </div><!-- /content-breadcrumb -->
+
+        <!-- content-body -->
+        <div class="content-body">
+            <!-- form -->
+            <div class="row-fluid">
+                <div class="span12">
+
+                    <!-- =========================================
+                                        ELEMENT
+                    =========================================== -->
+                    <!--element-->
+                    <div id="element" class="row-fluid">
+                        <!--span-->
+                        <div class="span12">
+                            <!--box-->
+                            <div class="box corner-all">
+                                <!--box header-->
+                                <div class="box-header grd-white color-silver-dark corner-top">
+                                    <!--div class="header-control">
+                                        <a data-box="collapse"><i class="icofont-caret-up"></i></a>
+                                        <a data-box="close">&times;</a>
+                                    </div-->
+                                    <span>编辑部门</span>
+                                </div><!--/box header-->
+                                <!--box body-->
+                                <div class="box-body">
+                                    <!--element-->
+                                    <form class="form-horizontal" />
+                                        <div class="control-group">
+                                            <label class="control-label" for="inputAuto">名称</label>
+                                            <div class="controls">
+                                                <input type="text" name="name" class="grd-white" />
+                                            </div>
+                                        </div>
+					<style>
+						.select2-results li.select2-result-with-children > .select2-result-label{display:none;}
+					</style>
+					<div class="control-group">
+                                            <label class="control-label" for="inputSelect">父级部门</label>
+                                            <div class="controls">
+                                                <select name="pgroup" data-form="select2" style="width:200px" data-placeholder="Your Favorite Type of Bear">
+                                                    <option value="0">请选择</option>
+						    <?php foreach ($grouplist as $group):?>
+						    <option value="<?=$group['group']['id']?>"><?=$group['group']['name']?></option>
+						    <optgroup label="<?=$group['group']['name']?>">
+							<?php foreach ($group['children'] as $g):?>
+							    <option value="<?=$group['group']['id']?>-<?=$g['id']?>"><?=$g['name']?></option>
+							<?php endforeach;?>
+						    </optgroup>
+						    <?php endforeach;?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="inputSelect">状态</label>
+                                            <div class="controls">
+                                                <select name="status" data-form="select2" style="width:200px" data-placeholder="Your Favorite Type of Bear">
+                                                    <option value="1" />启用
+                                                    <option value="0"/>禁止
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label" for="inputEditorSimple">说明</label>
+                                            <div class="controls">
+                                                <textarea id="inputEditorSimple" name="discription" class="span10" rows="8" data-form="wysihtml5" placeholder="Enter text ..."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-actions">
+                                            <button type="submit" class="btn btn-primary" id="submit">保存</button>
+                                            <button type="button" class="btn" id="cancel">取消</button>
+                                        </div>
+                                    </form>
+                                    <!--/element-->
+                                </div><!--/box body-->
+                            </div><!--/box-->
+                        </div><!--/span--> 
+                    </div><!--/element-->  
+                </div><!--/span-->
+            </div><!--/row-fluid-->
+            <!--/form-->
+        </div><!--/content-body -->
+    </div><!-- /content -->
+</div>
+<!-- /span content -->

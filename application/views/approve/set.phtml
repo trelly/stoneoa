@@ -1,0 +1,155 @@
+<!-- span content -->
+<div class="span9">
+    <!-- content -->
+    <div class="content">
+        <!-- content-header 
+        <div class="content-header">
+            <ul class="content-header-action pull-right">
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-green color-white"><i class="icofont-plus-sign"></i></div>
+                        <div class="action-text color-green">8765 <span class="helper-font-small color-silver-dark">Visits</span></div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-teal color-white"><i class="icofont-user-md"></i></div>
+                        <div class="action-text color-teal">1437 <span class="helper-font-small color-silver-dark">Users</span></div>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#">
+                        <div class="badge-circle grd-orange color-white">$</div>
+                        <div class="action-text color-orange">4367 <span class="helper-font-small color-silver-dark">Orders</span></div>
+                    </a>
+                </li>
+            </ul>
+            <h2><i class="icofont-file"></i> Form Elements</h2>
+        </div> /content-header -->
+
+        <!-- content-breadcrumb -->
+        <div class="content-breadcrumb">
+            <!--breadcrumb-nav
+            <ul class="breadcrumb-nav pull-right">
+                <li class="divider"></li>
+                <li class="btn-group">
+                    <a href="#" class="btn btn-small btn-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="icofont-cogs"></i> Controls
+                        <i class="icofont-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#element" class="scroll">Element</a></li>
+                        <li><a href="#validation" class="scroll">Validation</a></li>
+                        <li><a href="#wizard" class="scroll">Wizard</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#extending" class="scroll">Extending</a></li>
+                        <li><a href="#controls" class="scroll">Controls</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#buttons" class="scroll">Buttons</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="btn-group">
+                    <a href="#" class="btn btn-small btn-link">
+                        <i class="icofont-user"></i> Users <span class="color-red">(+34)</span>
+                    </a>
+                </li>
+            </ul>/breadcrumb-nav-->
+
+            <!--breadcrumb-->
+            <ul class="breadcrumb">
+                <li><a href="../system/dashboard"><i class="icofont-home"></i>主面板</a> <span class="divider">&rsaquo;</span></li>
+                <li><a href="list">审批</a> <span class="divider">&rsaquo;</span></li>
+                <li class="active">设置审批</li>
+            </ul><!--/breadcrumb-->
+        </div><!-- /content-breadcrumb -->
+
+        <!-- content-body -->
+        <div class="content-body">
+            <!-- form -->
+            <div class="row-fluid">
+                <div class="span12">
+
+                    <!-- =========================================
+                                        ELEMENT
+                    =========================================== -->
+                    <!--element-->
+                    <div id="element" class="row-fluid">
+                        <!--span-->
+                        <div class="span12">
+                            <!--box-->
+                            <div class="box corner-all">
+                                <!--box header-->
+                                <div class="box-header grd-white color-silver-dark corner-top">
+                                    <!--div class="header-control">
+                                        <a data-box="collapse"><i class="icofont-caret-up"></i></a>
+                                        <a data-box="close">&times;</a>
+                                    </div-->
+                                    <span>设置审批</span>
+                                </div><!--/box header-->
+                                <!--box body-->
+                                <div class="box-body">
+                                    <!--element-->
+                                    <form class="form-horizontal" />
+					<!--div class="control-group">
+					    <label class="control-label" for="inputSelect">分类</label>
+					    <div class="controls">
+						<select id="inputSelect" data-form="select2" style="width:200px" data-placeholder="Your Favorite Type of Bear">
+						    <option />销售
+						    <option />行政
+						</select>
+						<button type="submit" class="btn-mini btn-primary">添加分类</button>
+					    </div>
+					</div-->
+
+					<div class="control-group">						
+						<a class="btn" id="new_type">添加分类</a>
+						<a class="btn" id="rename_type">编辑</a>
+						<a href='new#id=<?=$lists[0]["id"]?>' class="btn btn-primary pull-right" id="new_temp">新建模版</a>
+					</div> 
+
+					<div class="tabbable tabs-left" id="approve_nav">
+					    
+                                            <ul class="nav nav-tabs">
+                                                <!--tab menus-->
+                                                <?php $i=0; ?>
+                                                <?php foreach ($lists as $list):?>
+                                                <?php if(++$i == 1):?>
+                                                <li class="active"><a data-toggle="tab" href="#boxtab-left-<?=$list['id']?>"><?=$list['name']?></a></li>
+                                                <?php else:?>
+                                                <li><a data-toggle="tab" href="#boxtab-left-<?=$list['id']?>"><?=$list['name']?></a></li>
+                                                <?php endif;?>
+                                                <?php endforeach;?>
+                                            </ul>
+                                            <!-- widgets-tab-body -->
+                                            <div class="tab-content" id="approve_content">
+                                                <?php $i=0; ?>
+                                                <?php foreach($lists as $list):?>
+                                                <div class="tab-pane fade <?=(++$i == 1)?'in active':''?>" id="boxtab-left-<?=$list['id']?>">
+                                                    <?php foreach ($templates[$list['id']] as $item):?>
+                                                    <p><a href='/approve/edit#<?=$item["id"]?>'><?=$item['name']?></a></p>
+						    <?php endforeach;?>
+                                                </div>
+                                                <?php endforeach;?>
+                                            </div><!--/widgets-tab-body-->
+                                        </div>
+					
+					
+
+					
+                                    </form>
+                                    <!--/element-->
+                                </div><!--/box body-->
+                            </div><!--/box-->
+                        </div><!--/span--> 
+                    </div><!--/element-->
+
+                </div><!--/span-->
+            </div><!--/row-fluid-->
+            <!--/form-->
+        </div><!--/content-body -->
+    </div><!-- /content -->
+</div>
+<!-- /span content -->
