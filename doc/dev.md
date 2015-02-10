@@ -53,6 +53,94 @@
 处理需要时间：1周 
 
 
+#stone 设计系统文档
+
+## 权限管理
+
+1. 角色可以自定义，系统默认三种角色（超级管理员, 管理员, 普通员工）
+
+2. 权限类型
+
+3. 接口地址
+    
+http://www.stone-soft.cn/open/role
+
+方法说明
+    
+**add($info)**   //添加角色
+
+参数：
+
+- $info['name'] {string} 角色名称
+- $info['description'] {string} 角色描述
+- $info['status']  {int} 角色是否启用
+- $info['privilege'] {int} 所有权限值的和
+
+**edit($info)**  //编辑角色
+
+参数：
+
+- 同上
+
+**privilege()**  //显示权限列表
+
+参数：
+
+- void 
+    
+**用户管理权限**
+
+    USER_VIEW       =  1     0x1
+    USER_CREATE     =  10    0x2
+    USER_EDIT       =  100   0x4
+    USER_DELETE     =  1000  0x8
+
+**部门管理权限**
+
+    DEPARTMENT_VIEW       =  0001 0000   0x1O
+    DEPARTMENT_CREATE     =  0010 0000   0x20
+    DEPARTMENT_EDIT       =  0100 0000   0x40
+    DEPARTMENT_DELETE     =  1000 0000   0x80
+
+**审批管理权限**
+  
+    APPROVE_VIEW       =  0001 0000 0000  0x100
+    APPROVE_CREATE     =  0010 0000 0000  0x200
+    APPROVE_EDIT       =  0100 0000 0000  0x400
+    APPROVE_DELETE     =  1000 0000 0000  0x800
+  
+**项目管理权限**
+    
+    PROJECT_VIEW       = 0001 0000 0000 0000  0x1000
+    PROJECT_CREATE     = 0010 0000 0000 0000  0x2000
+    PROJECT_DELETE     = 0100 0000 0000 0000  0x4000
+    PROJECT_EDIT       = 1000 0000 0000 0000  0x8000
+
+**公告管理权限**
+
+    NOTICE_VIEW       = 0001 0000 0000 0000 0000  0x10000
+    NOTICE_CREATE     = 0010 0000 0000 0000 0000  0x20000
+    NOTICE_DELETE     = 0100 0000 0000 0000 0000  0x40000
+    NOTICE_EDIT       = 1000 0000 0000 0000 0000  0x80000
+
+**考勤管理权限**
+
+    ATTENDANCE_VIEW       = 0001 0000 0000 0000 0000 0000  0x10000
+    ATTENDANCE_CREATE     = 0010 0000 0000 0000 0000 0000  0x20000
+    ATTENDANCE_DELETE     = 0100 0000 0000 0000 0000 0000  0x40000
+    ATTENDANCE_EDIT       = 1000 0000 0000 0000 0000 0000  0x80000
+
+**任务权限**
+
+    TASK_VIEW       = 0001 0000 0000 0000 0000 0000  0x100000
+    TASK_CREATE     = 0010 0000 0000 0000 0000 0000  0x200000
+    TASK_DELETE     = 0100 0000 0000 0000 0000 0000  0x400000
+    TASK_EDIT       = 1000 0000 0000 0000 0000 0000  0x800000
+
+
+
+
+
 
 
 
