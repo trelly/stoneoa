@@ -81,6 +81,7 @@ http://www.stone-soft.cn/open/role
 参数：
 
 - 同上
+- $info['id'] {int} //角色id
 
 **privilege()**  //显示权限列表
 
