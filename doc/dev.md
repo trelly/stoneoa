@@ -85,10 +85,14 @@ http://www.stone-soft.cn/open/role
 
 **privilege()**  //显示权限列表
 
+- void 
+
+**getRoleById($id)**   //通过角色id获取权限
+
 参数：
 
-- void 
-    
+- $id 角色id
+
 **用户管理权限**
 
     USER_VIEW       =  1     0x1
